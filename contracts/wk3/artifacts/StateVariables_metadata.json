@@ -45,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/wk3/StateVariables.sol": "StateVariables"
+			"appworks_blockchain_batch2/contracts/wk3/StateVariables.sol": "StateVariables"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -59,7 +59,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/wk3/StateVariables.sol": {
+		"appworks_blockchain_batch2/contracts/wk3/StateVariables.sol": {
 			"keccak256": "0x8974fd62af19e37dabd1cead282cb1fb2a9dcf64ab66f69eac03b61367a5b97e",
 			"license": "MIT",
 			"urls": [
