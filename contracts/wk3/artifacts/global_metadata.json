@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/contracts/wk3/GlobalVariables.sol": "global"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/contracts/wk3/GlobalVariables.sol": {
+			"keccak256": "0xb9dd7de852252e1ab46e4dc962fcd994ad0ac31115267b9681c39d88d5d49031",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d1b5ebc6e8f200002ec7a3145ded4d583ec161e5d71945e751dc7b9f459dcce7",
+				"dweb:/ipfs/Qmepy6A7kjHuHLPVbSf6KrKW5GQ8k5swXFXsacoDh69fZ5"
+			]
+		}
+	},
+	"version": 1
+}
