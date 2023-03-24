@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "MY_ADDRESS",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/contracts/wk3/Constants.sol": "Var"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/contracts/wk3/Constants.sol": {
+			"keccak256": "0xe27a1a3e48c39d0ddd826fc1fb9e226f141c533655c00680d44695164a8fea2f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1d80a4cbb8e520ef3d2fd4fd9119327265536d9b663e8872c6fafc091e71e0e8",
+				"dweb:/ipfs/QmZNTJAV1aRi6iwiVMgjuVkVQhQdJFooUAhhspNM9KR2jR"
+			]
+		}
+	},
+	"version": 1
+}
