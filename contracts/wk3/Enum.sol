@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=5Ojnbn0rkmI
+
 contract Enum {
     enum Status {
         None, // first value will be default value

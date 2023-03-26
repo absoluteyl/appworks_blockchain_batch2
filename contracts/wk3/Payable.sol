@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://solidity-by-example.org/payable/
+
 contract Payable {
     // Payable address can receive Ether
     address payable public owner;

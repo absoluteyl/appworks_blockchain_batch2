@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=Ld8bFWXLSfs
+
 contract IfElse {
     function exmaple(uint _x) external pure returns (uint) {
         if (_x < 10) {

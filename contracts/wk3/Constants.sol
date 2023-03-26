@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=y5uiQ9IJhMc
+
 // Constants use less gas when been exscuted
 // execution cost	378 gas (Cost only applies when called by a contract)
 contract Constants {

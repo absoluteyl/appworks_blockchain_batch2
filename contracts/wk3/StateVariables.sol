@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=hl692-xJPUQ
+
 contract StateVariables {
     // State Variables are declare inside of contract but outside of function,
     // values assigned to state variable will be stored on the blockchain.

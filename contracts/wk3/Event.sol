@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=nopo9KwwRg4
+
 // Event can stores data on the blockchain but not able to retrive
 contract Event {
     event Log(string message, uint val);

@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=pQJ4TeHifdk
+
 contract Structs {
     struct Car {
         string model;

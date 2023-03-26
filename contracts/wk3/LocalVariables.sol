@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=5Gxzwn0SQDU
+
 contract LocalVariables {
     uint public i;
     bool public b;

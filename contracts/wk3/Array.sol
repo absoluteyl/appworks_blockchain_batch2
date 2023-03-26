@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=vTxxCbwMPwo
+
 // Array - dynamic or fixed size
 contract Array {
     // Initialize dynamic array

@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=wCD3fOlsGc4
+
 contract HashFunc {
     function hash(string memory text, uint num, address addr) external pure returns (bytes32) {
         return keccak256(abi.encodePacked(text, num, addr));

@@ -127,11 +127,11 @@
 	},
 	"sources": {
 		"appworks_blockchain_batch2/contracts/wk3/Structs.sol": {
-			"keccak256": "0xf88ac13a15e2a4022f0c757f44c6473a9980218a1cf4004590fc451bfa6ea566",
+			"keccak256": "0x643d604890f8316d2df9f053f9de0c75f2e32b790273fc469257c6236d5ba8c9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8f8b47348cefec853a84073c98c789a6f5c4ea2afe0258b6713c8bfb215f0800",
-				"dweb:/ipfs/QmXG4V8Raf1Yr9gogxApA7BFaLxi64UJfoDv9h9n5NdZa3"
+				"bzz-raw://54993fed507d81d231d04b23570aa11c7d850a568eeebd7d0bb676aaaf0f9c84",
+				"dweb:/ipfs/QmRKu3MkTjezsbnoyPxeLb9uSdBBnR5By8rDt3EJS1SPeq"
 			]
 		}
 	},

@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=TPnu-uqJiVI
+
 // values when declare a variable but not assign value to it.
 contract DefaultValues {
     bool public b; // false

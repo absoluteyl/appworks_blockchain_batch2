@@ -111,11 +111,11 @@
 	},
 	"sources": {
 		"appworks_blockchain_batch2/contracts/wk3/Enum.sol": {
-			"keccak256": "0x24658f812542e9c629a3b7aa533ed15db0182bfc94d56e4c080314244cc2fc49",
+			"keccak256": "0xbcb7ed1667d7bee037028cfe92706f98f81dafbc9aa041cd945886c6d9a0faa6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://76f20657c924da6464728cdcc6e2a17da8987c1b0eac548d6db5e826f0bcdf47",
-				"dweb:/ipfs/QmXeHaWYa8F88zGUE2KD333CNXVtRa85NwQZyrQg4FEPny"
+				"bzz-raw://7eecaccb9a70102e8d5c80a459c7a68d4c2049246e140a641ea6c8f42cb8d82e",
+				"dweb:/ipfs/QmVEBZFmNmoyjX85KRqJDMe5CRpSzR4uyCvo8dtydX4tKJ"
 			]
 		}
 	},
