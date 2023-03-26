@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "isContract",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/contracts/wk3/IsContract.sol": "IsContract"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/contracts/wk3/IsContract.sol": {
+			"keccak256": "0x6d613ffb78b9918574400d76e78c3b7d2353c2517d7aba03609a5d9b72906ebf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://137a0857be20e24f963cac6e4ae7a8f977e235cfc51de66b37fca45fbac415da",
+				"dweb:/ipfs/QmWqJj7L2ZH3Sf8tmdtM8CzBRQhUKMzxichyfpw28N3uW7"
+			]
+		}
+	},
+	"version": 1
+}
