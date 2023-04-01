@@ -1,0 +1,73 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "bar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "foo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/contracts/wk4/ParentFunctions.sol": "H"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/contracts/wk4/ParentFunctions.sol": {
+			"keccak256": "0xc018d789fb714406618de07bb8637a03f07cbfa63a4b1aae9a074e16c6c0ce0f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1da55013a7ec0466f3d7ae528b5b9a08853b6950c32fcae5c3e6528e3c651f21",
+				"dweb:/ipfs/QmbRmzHZJGHdRdVq9RiMv7H2Xm5srGNGNP4bDzhE4iN3Fy"
+			]
+		}
+	},
+	"version": 1
+}
