@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "origin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sender",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/contracts/wk4/Caller.sol": "Callee"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/contracts/wk4/Caller.sol": {
+			"keccak256": "0x1b2cf0b301f1598ea76044c8ab9f2a1bf7c26edbf33834df4eaa9f35c7f38e19",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a21c73949270a2762dc98cb051e133f34a05477312d8524f382c690648c57dfc",
+				"dweb:/ipfs/QmQvyHtdQxqewZdUu5MCk5TAsg6shu3DcQrfaNLwpSNRWC"
+			]
+		}
+	},
+	"version": 1
+}
