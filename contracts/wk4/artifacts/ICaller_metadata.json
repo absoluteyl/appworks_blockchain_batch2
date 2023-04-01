@@ -7,35 +7,44 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "getData",
+				"name": "addrs",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "calleeSender",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "calleeOrigin",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "thisSender",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "thisOrigin",
+								"type": "address"
+							}
+						],
+						"internalType": "struct ICaller.Addrs",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDataFromCallee",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "origin",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "sender",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -52,7 +61,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/CallerCallee.sol": "ICallee"
+			"appworks_blockchain_batch2/contracts/wk4/CallerCallee.sol": "ICaller"
 		},
 		"evmVersion": "paris",
 		"libraries": {},

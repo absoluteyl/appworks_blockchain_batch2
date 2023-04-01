@@ -6,8 +6,14 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "getData",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_callee",
+						"type": "address"
+					}
+				],
+				"name": "getDataFromCallee",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -52,7 +58,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/CallerCallee.sol": "ICallee"
+			"appworks_blockchain_batch2/contracts/wk4/call_chains/Caller.sol": "Caller"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -66,12 +72,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/CallerCallee.sol": {
-			"keccak256": "0xe0f393c39ad78a7668f22cf7edd74870fe712b4e9494ec545d8e5593654cc263",
+		"appworks_blockchain_batch2/contracts/wk4/call_chains/Caller.sol": {
+			"keccak256": "0x36a841c9d1ca1803b614e38fdd60a8023b0eaa6acb4cd33a0191d7b9d9c61706",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dee6171ffb782612a936548530fe6a6e4bb7f0d69487f32dcfdaead5feb66b64",
-				"dweb:/ipfs/QmUSf47fWRuuwPsv5vxohF5h5QYKSgU65k5xhGspat2ybN"
+				"bzz-raw://eb06d862b83571a349ca1d65aa092442e697aa1c178895da1a5fd58fc3bf67a6",
+				"dweb:/ipfs/QmNqdDYeYM5Txxg3P9d8LkjWZnqf9vwS9Ce4vfjTw9p4qW"
 			]
 		}
 	},

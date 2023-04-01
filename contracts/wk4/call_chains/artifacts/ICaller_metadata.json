@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_callee",
+						"type": "address"
+					}
+				],
+				"name": "getDataFromCallee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/contracts/wk4/call_chains/AnotherCaller.sol": "ICaller"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/contracts/wk4/call_chains/AnotherCaller.sol": {
+			"keccak256": "0xcef819768c261c67ec976c91537bd2e0252dab16f628cbc73bcd7cea9958fe38",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://107921b1a62cb63a8f5d60315ecf5111ba66927eb47d3edf49d823401415def4",
+				"dweb:/ipfs/QmWwtyEYVq2ar71y7tFqVTNdMozyJ4nqeiQcEfwgtYeAcA"
+			]
+		}
+	},
+	"version": 1
+}
