@@ -58,7 +58,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/Inheritance.sol": "C"
+			"appworks_blockchain_batch2/contracts/wk4/Inheritance.sol": "B"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
