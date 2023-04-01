@@ -131,11 +131,11 @@
 	},
 	"sources": {
 		"appworks_blockchain_batch2/contracts/wk4/DataLocations.sol": {
-			"keccak256": "0x051cb006fbcfa1b3f16050da477ae671fa0e87854ac00eedd69ff5b210dd0ce6",
+			"keccak256": "0xc6c8ec39f7143d3160e1ee90ff37a9e0bbfc1c49b12b9dcbbfc501e46e317077",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f4967b318452356077739297ffc3476de7200eee278a323ca20a249dae79c596",
-				"dweb:/ipfs/QmcPZWsNgFXS3ts3qoJC4R9BRxv9Cf7uPLt4SCcuAK4puX"
+				"bzz-raw://49ba636c17a7d911630c696dfca877a92322ecf3ff078d1b1f375757282e9d05",
+				"dweb:/ipfs/QmP6qJLbpDmYrYVaxqxC1HX2UJPXdh5LoTsWuHLTkaPZd2"
 			]
 		}
 	},

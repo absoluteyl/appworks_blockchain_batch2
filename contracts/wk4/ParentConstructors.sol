@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=nPtEpw4olSk
+
 // 2 ways to call parent constructors
 // order or initialization
 contract S {

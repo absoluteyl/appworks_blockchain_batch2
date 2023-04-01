@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+// ref: https://www.youtube.com/watch?v=tbjyc-VQaQo
+
 contract Counter {
     // 沒給起始值的 uint, 第一次呼叫時要 create storage slot 會花比較多 gas
     uint public count;
