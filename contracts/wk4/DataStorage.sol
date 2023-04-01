@@ -27,3 +27,14 @@ contract DataStorage {
         // str2 = _string;
     }
 }
+
+// Test contract for storage slot
+contract Slot {
+    // This uint256 will be stored in slot0
+    uint i = 10;
+    function integer() public view returns(uint) {
+        return i;
+    }
+    // we can use web3.js to retrive data from specific slot
+    // web3.eth.getStorageAt("0xdf710e103510d4eb23cdf53ebcaf0aa8844a2bbd", 0, console.log)
+}
