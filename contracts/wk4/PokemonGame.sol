@@ -18,10 +18,19 @@ contract PokemonGame {
     Pokemon[] public pokemons;
     mapping (address => uint[]) public ownerToPokemonIds;
 
-    // Pokemon Helper
+    // Pokemon Helpers
     function findByName(string calldata _name) internal view returns (uint) {
         for(uint i = 0; i < pokemons.length; i++) {
             if(keccak256(abi.encodePacked(pokemons[i].name)) == keccak256(abi.encodePacked(_name))) {
+                return i;
+            }
+        }
+        revert("Not Found.");
+    }
+
+    function findById(uint _id) internal view returns (uint) {
+        for(uint i = 0; i < pokemons.length; i++) {
+            if(pokemons[i].id == _id) {
                 return i;
             }
         }
@@ -49,19 +58,19 @@ contract PokemonGame {
     }
 
     // Add Attack points of selected pokemon of Msg Sender
-    function addAttack(string calldata _name) external payable {
+    function addAttack(uint _id) external payable {
         require((msg.value == 0.01 ether), "Amount should be 0.01 Ether");
         
-        uint _idx = findByName(_name);
+        uint _idx = findById(_id);
         Pokemon storage _pokemon = pokemons[_idx];
         _pokemon.attack += 100;
     }
 
     // Add Defense points of selected pokemon of Msg Sender
-    function addDefense(string calldata _name) external payable {
+    function addDefense(uint _id) external payable {
         require((msg.value == 0.01 ether), "Amount should be 0.01 Ether");
         
-        uint _idx = findByName(_name);
+        uint _idx = findById(_id);
         Pokemon storage _pokemon = pokemons[_idx];
         _pokemon.defense += 100;
     }
