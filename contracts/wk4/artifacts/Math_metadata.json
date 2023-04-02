@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/contracts/wk4/Library.sol": "Math"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/contracts/wk4/Library.sol": {
+			"keccak256": "0xb6f3b2fd2defe3838dde2ebb4f9521dc009aa5577816aa572af74a06fcc5f96a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d1d132493068e3c491f6aa5f864064e09107fc9ba4272a7ed15c7180199ea386",
+				"dweb:/ipfs/QmeYB1saF8zTDF8BaQHK8YbJPJjdP6UevVYpUjaMhZ6ZSq"
+			]
+		}
+	},
+	"version": 1
+}
