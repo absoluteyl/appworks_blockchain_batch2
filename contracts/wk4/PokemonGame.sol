@@ -35,14 +35,14 @@ contract PokemonGame {
 
     // Add Attack points of selected pokemon of Msg Sender
     function addAttack(uint pokemonIdx) external payable {
-        require((msg.value == 0.01 ether), "Amount should be greater than 0.01 Ether");
+        require((msg.value == 0.01 ether), "Amount should be 0.01 Ether");
         Pokemon storage _pokemon = ownerToPokemons[msg.sender][pokemonIdx];
         _pokemon.attack += 100;
     }
 
     // Add Defense points of selected pokemon of Msg Sender
     function addDefense(uint pokemonIdx) external payable {
-        require((msg.value == 0.01 ether), "Amount should be greater than 0.01 Ether");
+        require((msg.value == 0.01 ether), "Amount should be 0.01 Ether");
         Pokemon storage _pokemon = ownerToPokemons[msg.sender][pokemonIdx];
         _pokemon.defense += 100;
     }
