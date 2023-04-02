@@ -31,8 +31,8 @@ contract PokemonGame {
     // Create Pokemon for Msg Sender
     function create(string calldata _name) external {
         // Generate random attack, defense points.
-        uint _attack = uint(keccak256(abi.encodePacked(_name))) % 1000 * 5;
-        uint _defense = uint(keccak256(abi.encodePacked(_name))) % 100 * 60;
+        uint _attack = uint(keccak256(abi.encodePacked(_name, block.timestamp))) % 1000 * 5;
+        uint _defense = uint(keccak256(abi.encodePacked(_name, block.timestamp))) % 100 * 60;
 
         // Init the pokemon
         uint _id = pokemons.length + 1;
