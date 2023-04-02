@@ -1,0 +1,115 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "pokemonIdx",
+						"type": "uint256"
+					}
+				],
+				"name": "addAttack",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "pokemonIdx",
+						"type": "uint256"
+					}
+				],
+				"name": "addDefense",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "create",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "list",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "attack",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "defense",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct PokemonGame.Pokemon[]",
+						"name": "_pokemons",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/contracts/wk4/PokemonGame.sol": "PokemonGame"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/contracts/wk4/PokemonGame.sol": {
+			"keccak256": "0x7dca1d9a6ae1544c54f2ed11b5d318d7abe866e09f9c28411ccf825bca771da7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2b9e0c4422ac83f99c2cec3cb2051098f3e4e847b7e64384a888823ff15adff8",
+				"dweb:/ipfs/QmNnU3NQnjxFtFsM1FHoh3vAGRY7wjh4WmtYu7E66F4Mas"
+			]
+		}
+	},
+	"version": 1
+}
