@@ -217,11 +217,11 @@
 	},
 	"sources": {
 		"appworks_blockchain_batch2/contracts/wk4/ERC20.sol": {
-			"keccak256": "0x39f514409b8e345eef852f21a9e6cf65aa31ee5151c3135e1be431e5a0351b10",
+			"keccak256": "0xc95a4536cb773a1159ea2293ec4a37e8d77a636d7f50f49d7f38f4b45e739fd1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://eb567264b1017799c1f4bba66876d51e83ade60d5ee6c15053ed9c668bfe6ac0",
-				"dweb:/ipfs/QmTvCYgKkde2Du7cQkmm5Bw1zxdb3TNEM65JWFvmLYe8HP"
+				"bzz-raw://022d6231aea7f83d3b1c58f2dbdd79e694dff2afffd6ef5f0253a6038466de2f",
+				"dweb:/ipfs/QmUqd1ZbF2wKenMMo1ayhpohk6ytYUs9i4t4Qu6xhmgVai"
 			]
 		}
 	},
