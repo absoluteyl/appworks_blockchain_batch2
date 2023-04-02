@@ -7,33 +7,6 @@ pragma solidity ^0.8.19;
 // 一個玩家可以有多個寶可夢
 // 需要有一個 create 的方法來創造出寶可夢
 // （optional) 可付費 0.1 ETH 來增加該玩家所擁有的特定寶可夢的攻擊或是防禦
-
-// library PokemonHelper {
-    // function find(
-    //     uint[] memory arr,
-    //     uint x
-    // ) internal view returns (uint) {
-    //     for(uint i = 0; i < arr.length; i++) {
-    //         if(arr[i] == x) {
-    //             return i;
-    //         }
-    //     }
-    //     revert("Not Found.");
-    // }
-
-//     function findByName(
-//         string[] storage arr,
-//         string str
-//     ) internal view returns (uint) {
-//         for(uint i = 0; i < arr.length; i++) {
-//             if(keccak256(abi.encodePacked(arr[i])) == keccak256(abi.encodePacked(str))) {
-//                 return i;
-//             }
-//         }
-//         revert("Not Found.");
-//     }
-// }
-
 contract PokemonGame {
     struct Pokemon {
         uint   id;      // Unique ID amount all pokemons.
