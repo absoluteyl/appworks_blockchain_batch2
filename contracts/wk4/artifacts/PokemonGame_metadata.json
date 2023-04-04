@@ -9,7 +9,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "pokemonIdx",
+						"name": "_id",
 						"type": "uint256"
 					}
 				],
@@ -22,7 +22,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "pokemonIdx",
+						"name": "_id",
 						"type": "uint256"
 					}
 				],
@@ -46,29 +46,70 @@
 			},
 			{
 				"inputs": [],
-				"name": "list",
+				"name": "listMyPokemons",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "string",
-								"name": "name",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "attack",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "defense",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct PokemonGame.Pokemon[]",
-						"name": "_pokemons",
-						"type": "tuple[]"
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerToPokemonIds",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "pokemons",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "attack",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "defense",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -103,11 +144,11 @@
 	},
 	"sources": {
 		"appworks_blockchain_batch2/contracts/wk4/PokemonGame.sol": {
-			"keccak256": "0x7dca1d9a6ae1544c54f2ed11b5d318d7abe866e09f9c28411ccf825bca771da7",
+			"keccak256": "0x814c30df1ec76811ee940e2f82331ad3551a60fad703fe761fe15562fc8660af",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2b9e0c4422ac83f99c2cec3cb2051098f3e4e847b7e64384a888823ff15adff8",
-				"dweb:/ipfs/QmNnU3NQnjxFtFsM1FHoh3vAGRY7wjh4WmtYu7E66F4Mas"
+				"bzz-raw://6894afa8c2c25e0c973e6a930548fe4be5061284c069003943ff585dc26cb57a",
+				"dweb:/ipfs/QmRJPCxUD2vjAamDAbsTzPi7LsZkRrXbHFRwnxsDXCxZc7"
 			]
 		}
 	},

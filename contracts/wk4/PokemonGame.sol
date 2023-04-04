@@ -61,8 +61,7 @@ contract PokemonGame {
     function addAttack(uint _id) external payable {
         require((msg.value == 0.01 ether), "Amount should be 0.01 Ether");
         
-        uint _idx = findById(_id);
-        Pokemon storage _pokemon = pokemons[_idx];
+        Pokemon storage _pokemon = pokemons[(_id - 1)];
         _pokemon.attack += 100;
     }
 
@@ -70,8 +69,7 @@ contract PokemonGame {
     function addDefense(uint _id) external payable {
         require((msg.value == 0.01 ether), "Amount should be 0.01 Ether");
         
-        uint _idx = findById(_id);
-        Pokemon storage _pokemon = pokemons[_idx];
+        Pokemon storage _pokemon = pokemons[(_id - 1)];
         _pokemon.defense += 100;
     }
 }
