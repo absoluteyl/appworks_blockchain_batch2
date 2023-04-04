@@ -16,26 +16,30 @@ contract PokemonGame {
     }
 
     Pokemon[] public pokemons;
+    mapping(uint => uint) public pokemonIdToIdx;
     mapping (address => uint[]) public ownerToPokemonIds;
 
-    // Pokemon Helpers
-    function findByName(string calldata _name) internal view returns (uint) {
-        for(uint i = 0; i < pokemons.length; i++) {
-            if(keccak256(abi.encodePacked(pokemons[i].name)) == keccak256(abi.encodePacked(_name))) {
-                return i;
-            }
-        }
-        revert("Not Found.");
-    }
+    // // Pokemon Helpers
 
-    function findById(uint _id) internal view returns (uint) {
-        for(uint i = 0; i < pokemons.length; i++) {
-            if(pokemons[i].id == _id) {
-                return i;
-            }
-        }
-        revert("Not Found.");
-    }
+    // !! Using for loop could cause high gas fee when an owner has a lot of pokemons. !!
+    // function findByName(string calldata _name) internal view returns (uint) {
+    //     for(uint i = 0; i < pokemons.length; i++) {
+    //         if(keccak256(abi.encodePacked(pokemons[i].name)) == keccak256(abi.encodePacked(_name))) {
+    //             return i;
+    //         }
+    //     }
+    //     revert("Not Found.");
+    // }
+
+    // !! Using for loop could cause high gas fee when an owner has a lot of pokemons. !!
+    // function findById(uint _id) internal view returns (uint) {
+    //     for(uint i = 0; i < pokemons.length; i++) {
+    //         if(pokemons[i].id == _id) {
+    //             return i;
+    //         }
+    //     }
+    //     revert("Not Found.");
+    // }
 
     // Create Pokemon for Msg Sender
     function create(string calldata _name) external {
@@ -46,6 +50,7 @@ contract PokemonGame {
         // Init the pokemon
         uint _id = pokemons.length + 1;
         Pokemon memory _pokemon = Pokemon(_id, _name, _attack, _defense);
+        pokemonIdToIdx[_id] = pokemons.length; // set id to idx mapping
 
         // Add it to sender's collection.
         pokemons.push(_pokemon);
@@ -61,7 +66,8 @@ contract PokemonGame {
     function addAttack(uint _id) external payable {
         require((msg.value == 0.01 ether), "Amount should be 0.01 Ether");
         
-        Pokemon storage _pokemon = pokemons[(_id - 1)];
+        uint _idx = pokemonIdToIdx[_id];
+        Pokemon storage _pokemon = pokemons[_idx];
         _pokemon.attack += 100;
     }
 
@@ -69,7 +75,8 @@ contract PokemonGame {
     function addDefense(uint _id) external payable {
         require((msg.value == 0.01 ether), "Amount should be 0.01 Ether");
         
-        Pokemon storage _pokemon = pokemons[(_id - 1)];
+        uint _idx = pokemonIdToIdx[_id];
+        Pokemon storage _pokemon = pokemons[_idx];
         _pokemon.defense += 100;
     }
 }
