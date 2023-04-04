@@ -33,6 +33,32 @@
 			},
 			{
 				"inputs": [],
+				"name": "c",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "d",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "foo",
 				"outputs": [
 					{
@@ -58,7 +84,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/MultipleInheritance.sol": "A"
+			"appworks_blockchain_batch2/contracts/wk4/MultipleInheritance.sol": "D"
 		},
 		"evmVersion": "paris",
 		"libraries": {},

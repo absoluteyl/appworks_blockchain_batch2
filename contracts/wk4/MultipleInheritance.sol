@@ -48,12 +48,71 @@ contract Z is X, Y {
 
 /* 
 Case2:
-   X
+   A
  /   \
-Y     A
+B     C
 |     |
-|     B
+|     D
  \   /
-   Z
+   E
 */
-// order of most base-like to derived: X > Y = A > B > Z
+// order of most base-like to derived: A > B = C > D > E
+contract A {
+    function foo() public pure virtual returns (string memory) {
+        return "A";
+    }
+    function bar() public pure virtual returns (string memory) {
+        return "A";
+    }
+    function a() public pure returns (string memory) {
+        return "A";
+    }
+}
+
+contract B is A {
+    function foo() public pure virtual override returns (string memory) {
+        return "B";
+    }
+    function bar() public pure virtual override returns (string memory) {
+        return "B";
+    }
+    function b() public pure returns (string memory) {
+        return "B";
+    }
+}
+
+contract C is A {
+    function foo() public pure virtual override returns (string memory) {
+        return "C";
+    }
+    function bar() public pure virtual override returns (string memory) {
+        return "C";
+    }
+    function c() public pure returns (string memory) {
+        return "C";
+    }
+}
+
+contract D is A, C {
+    function foo() public pure virtual override(A, C) returns (string memory) {
+        return "D";
+    }
+    function bar() public pure virtual override(A, C) returns (string memory) {
+        return "D";
+    }
+    function d() public pure returns (string memory) {
+        return "D";
+    }
+}
+
+contract E is A, B, C, D {
+    function foo() public pure virtual override(A, B, C, D) returns (string memory) {
+        return "E";
+    }
+    function bar() public pure virtual override(A, B, C, D) returns (string memory) {
+        return "E";
+    }
+    function e() public pure returns (string memory) {
+        return "E";
+    }
+}

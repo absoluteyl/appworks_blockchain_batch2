@@ -73,11 +73,11 @@
 	},
 	"sources": {
 		"appworks_blockchain_batch2/contracts/wk4/MultipleInheritance.sol": {
-			"keccak256": "0x7f0f275213792f5fd4534370a085d1b476c4f8412b142ec6d8581bca0b769f1d",
+			"keccak256": "0xe9e24185042b32634f955dce68215ce45eb87b002904467e460b00a6cc2479ca",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d9c30008bb3d3f208af196a5c541568025341b38dccc8e525c9d0c96e4b18ec7",
-				"dweb:/ipfs/QmUp2a2wKT76hYMVhCB3Yes7vBJvdf3rDs66Pn16cLWEqU"
+				"bzz-raw://b0b5ed919c6b27b16009c4d6b38b0dd7668e8064ef488e585e9daae6ac930c84",
+				"dweb:/ipfs/QmahpLn7qgX1NA7MHzzqDnjewMGMFmxm1WBZAiFzSFUDh9"
 			]
 		}
 	},
