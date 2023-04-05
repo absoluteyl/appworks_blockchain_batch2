@@ -163,11 +163,11 @@
 	},
 	"sources": {
 		"appworks_blockchain_batch2/contracts/wk4/PokemonGame.sol": {
-			"keccak256": "0xbead60db8baaf6636d87721a36529f93bd13e766512ed11feedce5031749b558",
+			"keccak256": "0x08891d6af0f43650be73ebe7c3aef900de15d542cde93fb1a2b66f8854f4f0ce",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8e3ba245e378be454f6f2e7a604d9a4af3589594d64747c53c3e84c931c5d7b3",
-				"dweb:/ipfs/QmX62PLvxtaHiXVjsB4PGYhBBQQiNkaHx5cNUYZYFF3SMt"
+				"bzz-raw://71a6e5cd30dd189930967c50629af83088f95fd2e27326087ed7928b097f5051",
+				"dweb:/ipfs/QmWVEEzRX4QZKosqtncF6Gw2edtkk15yUjSwAZDa7WB79g"
 			]
 		}
 	},
