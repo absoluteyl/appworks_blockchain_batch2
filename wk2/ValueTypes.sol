@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.0;
 
 // ref: https://www.youtube.com/watch?v=8Tj-Th_S7NU
 // deployed link: https://goerli.etherscan.io/address/0x8f36bb1511424fe2032183834465c2153fc93299

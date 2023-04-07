@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.0;
 
 // 製作一款寶可夢遊戲
 // 一個寶可夢需要有名稱，攻擊與防禦這三種屬性
