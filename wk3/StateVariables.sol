@@ -8,7 +8,7 @@ contract StateVariables {
   // values assigned to state variable will be stored on the blockchain.
   uint public myUint = 123;
 
-  function foo() external returns (uint) {
+  function foo() external pure returns (uint) {
     // variables within a function is local variable,
     // local variables only exist while the function is been excuted.
     uint notStateVariable = 456;

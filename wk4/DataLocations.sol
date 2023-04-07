@@ -32,7 +32,7 @@ contract DataLocations {
   }
 
   // input variables from memory (which are copied from calldata)
-  function examples2(uint[] memory y, string memory s) external returns (uint[] memory) {
+  function examples2(uint[] memory y, string memory s) external pure returns (uint[] memory) {
     // Arrays which initialized in memory can only be a fixed-size array.
     uint[] memory memArr = new uint[](3);
     uint x = y[0];
@@ -43,7 +43,7 @@ contract DataLocations {
   // gas consumed: 29112
 
   // input variables from calldata
-  function examples3(uint[] calldata y, string calldata s) external returns (uint[] memory) {
+  function examples3(uint[] calldata y, string calldata s) external pure returns (uint[] memory) {
     // Arrays which initialized in memory can only be a fixed-size array.
     uint[] memory memArr = new uint[](3);
     uint x = y[0];
