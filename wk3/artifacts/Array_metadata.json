@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.19+commit.7dd6d404"
+		"version": "0.8.6+commit.11564f7e"
 	},
 	"language": "Solidity",
 	"output": {
@@ -49,6 +49,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "returnArray",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -64,9 +77,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk3/Array.sol": "Array"
+			"appworks_blockchain_batch2/wk3/Array.sol": "Array"
 		},
-		"evmVersion": "paris",
+		"evmVersion": "berlin",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -78,12 +91,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk3/Array.sol": {
-			"keccak256": "0xcc283884beac17bfa052e1832073ad5e039f2f4e5e85147352e7130d71cc97c2",
+		"appworks_blockchain_batch2/wk3/Array.sol": {
+			"keccak256": "0x9547b6cee6280d3cde71ecf415028393cc603e1b9c204cc7a89977a175306a05",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b0b06cbf9c712c848459090f8ca724a69782b5c29ee0a02ce73c3dc1ab4eb265",
-				"dweb:/ipfs/QmTgZKkAA9pzFDVcPWmQy9fP8vSxFHQVVSgfEp6TXqQYJ3"
+				"bzz-raw://d7b1b7f351aa1b19e88f8d4d5b1bf99eb24f51a8f90bb04bcbc0246811aff1fd",
+				"dweb:/ipfs/QmbbfNdg6sjroQQ3EX7NgvnPmDkBaEwUNsvGVatbTe7nfL"
 			]
 		}
 	},

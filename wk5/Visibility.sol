@@ -26,44 +26,44 @@ Contract C (C can call pub() and ext() from both A and B)
 */
 
 contract VisibilityBase {
-    uint private  x = 0;
-    uint internal y = 1;
-    uint public   z = 2;
+  uint private  x = 0;
+  uint internal y = 1;
+  uint public   z = 2;
 
-    function privateFunc() private pure returns(uint) {
-        return 0;
-    }
+  function privateFunc() private pure returns(uint) {
+    return 0;
+  }
 
-    function internalFunc() internal pure returns(uint) {
-        return 100;
-    }
+  function internalFunc() internal pure returns(uint) {
+    return 100;
+  }
 
-    function publicFunc() public pure returns(uint) {
-        return 200;
-    }
+  function publicFunc() public pure returns(uint) {
+    return 200;
+  }
 
-    function externalFunc() external pure returns(uint) {
-        return 300;
-    }
+  function externalFunc() external pure returns(uint) {
+    return 300;
+  }
 
-    function examples() external view {
-        x + y + z;
-        privateFunc();
-        internalFunc();
-        publicFunc();
+  function examples() external view {
+    x + y + z;
+    privateFunc();
+    internalFunc();
+    publicFunc();
 
-        // externalFunc();      // Not able to compile when calling external function. 
-        // this.externalFunc(); // Although we can make an external call by using "this" but gas inefficient.
-    }
+    // externalFunc();      // Not able to compile when calling external function.
+    // this.externalFunc(); // Although we can make an external call by using "this" but gas inefficient.
+  }
 }
 
 contract VisibilityChild is VisibilityBase {
-    function examples2() external view {
-        y + z;             // x cannot be called since it's private
-        // privateFunc();  // privateFunc cannot be called since it's private
-        internalFunc();
-        publicFunc();
+  function examples2() external view {
+    y + z;             // x cannot be called since it's private
+    // privateFunc();  // privateFunc cannot be called since it's private
+    internalFunc();
+    publicFunc();
 
-        // externalFunc(); // Also not able to be called
-    }
+    // externalFunc(); // Also not able to be called
+  }
 }

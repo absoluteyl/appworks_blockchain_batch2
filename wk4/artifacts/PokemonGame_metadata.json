@@ -148,7 +148,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/PokemonGame.sol": "PokemonGame"
+			"appworks_blockchain_batch2/wk4/PokemonGame.sol": "PokemonGame"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -162,7 +162,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/PokemonGame.sol": {
+		"appworks_blockchain_batch2/wk4/PokemonGame.sol": {
 			"keccak256": "0x08891d6af0f43650be73ebe7c3aef900de15d542cde93fb1a2b66f8854f4f0ce",
 			"license": "MIT",
 			"urls": [

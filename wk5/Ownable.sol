@@ -10,22 +10,22 @@ pragma solidity ^0.8.0;
 // error handling
 
 contract Ownable {
-    address public owner;
+  address public owner;
 
-    constructor () {
-        owner = msg.sender;
-    }
+  constructor () {
+    owner = msg.sender;
+  }
 
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Permission Denied.");
-        _;
-    }
+  modifier onlyOwner() {
+    require(msg.sender == owner, "Permission Denied.");
+    _;
+  }
 
-    function setOwner(address _newOwner) external onlyOwner {
-        require(_newOwner != address(0), "Invalid Address.");
-        owner = _newOwner;
-    }
+  function setOwner(address _newOwner) external onlyOwner {
+    require(_newOwner != address(0), "Invalid Address.");
+    owner = _newOwner;
+  }
 
-    function onlyOwnerCanCall() external onlyOwner {}
-    function anyoneCanCall() external {}
+  function onlyOwnerCanCall() external onlyOwner {}
+  function anyoneCanCall() external {}
 }

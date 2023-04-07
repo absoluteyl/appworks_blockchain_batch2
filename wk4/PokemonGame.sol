@@ -8,76 +8,75 @@ pragma solidity ^0.8.0;
 // 需要有一個 create 的方法來創造出寶可夢
 // （optional) 可付費 0.1 ETH 來增加該玩家所擁有的特定寶可夢的攻擊或是防禦
 contract PokemonGame {
-    struct Pokemon {
-        uint   id;      // Unique ID amount all pokemons.
-        string name;    // Pokemon Name given by owner.
-        uint   attack;  // Attack Points.
-        uint   defense; // Defense Points.
-    }
+  struct Pokemon {
+    uint   id;      // Unique ID amount all pokemons.
+    string name;    // Pokemon Name given by owner.
+    uint   attack;  // Attack Points.
+    uint   defense; // Defense Points.
+  }
 
-    Pokemon[] public pokemons;
-    mapping(uint => uint) public pokemonIdToIdx;
-    mapping (address => uint[]) public ownerToPokemonIds;
+  Pokemon[] public pokemons;
+  mapping(uint => uint) public pokemonIdToIdx;
+  mapping (address => uint[]) public ownerToPokemonIds;
 
-    // // Pokemon Helpers
+  // // Pokemon Helpers
+  // // !! Using for loop could cause high gas fee when an owner has a lot of pokemons. !!
+  // function findByName(string calldata _name) internal view returns (uint) {
+  //   for(uint i = 0; i < pokemons.length; i++) {
+  //     if(keccak256(abi.encodePacked(pokemons[i].name)) == keccak256(abi.encodePacked(_name))) {
+  //       return i;
+  //     }
+  //   }
+  //   revert("Not Found.");
+  // }
 
-    // !! Using for loop could cause high gas fee when an owner has a lot of pokemons. !!
-    // function findByName(string calldata _name) internal view returns (uint) {
-    //     for(uint i = 0; i < pokemons.length; i++) {
-    //         if(keccak256(abi.encodePacked(pokemons[i].name)) == keccak256(abi.encodePacked(_name))) {
-    //             return i;
-    //         }
-    //     }
-    //     revert("Not Found.");
-    // }
+  // // !! Using for loop could cause high gas fee when an owner has a lot of pokemons. !!
+  // function findById(uint _id) internal view returns (uint) {
+  //   for(uint i = 0; i < pokemons.length; i++) {
+  //     if(pokemons[i].id == _id) {
+  //       return i;
+  //     }
+  //   }
+  //   revert("Not Found.");
+  // }
 
-    // !! Using for loop could cause high gas fee when an owner has a lot of pokemons. !!
-    // function findById(uint _id) internal view returns (uint) {
-    //     for(uint i = 0; i < pokemons.length; i++) {
-    //         if(pokemons[i].id == _id) {
-    //             return i;
-    //         }
-    //     }
-    //     revert("Not Found.");
-    // }
+  // Create Pokemon for Msg Sender
+  function create(string calldata _name) external {
+    // Generate random attack, defense points.
+    uint _attack = uint(keccak256(abi.encodePacked(_name, block.timestamp))) % 1000 * 5;
+    uint _defense = uint(keccak256(abi.encodePacked(_name, block.timestamp))) % 100 * 60;
 
-    // Create Pokemon for Msg Sender
-    function create(string calldata _name) external {
-        // Generate random attack, defense points.
-        uint _attack = uint(keccak256(abi.encodePacked(_name, block.timestamp))) % 1000 * 5;
-        uint _defense = uint(keccak256(abi.encodePacked(_name, block.timestamp))) % 100 * 60;
+    // Init the pokemon
+    uint _id = pokemons.length + 1;
+    Pokemon memory _pokemon = Pokemon(_id, _name, _attack, _defense);
+    pokemonIdToIdx[_id] = pokemons.length; // set id to idx mapping
 
-        // Init the pokemon
-        uint _id = pokemons.length + 1;
-        Pokemon memory _pokemon = Pokemon(_id, _name, _attack, _defense);
-        pokemonIdToIdx[_id] = pokemons.length; // set id to idx mapping
+    // Add it to sender's collection.
+    pokemons.push(_pokemon);
+    ownerToPokemonIds[msg.sender].push(_id);
+  }
 
-        // Add it to sender's collection.
-        pokemons.push(_pokemon);
-        ownerToPokemonIds[msg.sender].push(_id);
-    }
+  // List all Pokemons of Msg Sender
+  function listMyPokemons() external view returns (uint[] memory) {
+    return ownerToPokemonIds[msg.sender];
+  }
 
-    // List all Pokemons of Msg Sender
-    function listMyPokemons() external view returns (uint[] memory) {
-        return ownerToPokemonIds[msg.sender];
-    }
+  modifier whenPayEnough() {
+    require((msg.value == 0.01 ether), "Amount should be 0.01 Ether");
+    _;
+  }
 
-    modifier whenPayEnough() {
-        require((msg.value == 0.01 ether), "Amount should be 0.01 Ether");
-        _;
-    }
+  // Add Attack points of selected pokemon of Msg Sender
+  function addAttack(uint _id) external payable whenPayEnough {
+    uint _idx = pokemonIdToIdx[_id];
+    Pokemon storage _pokemon = pokemons[_idx];
+    _pokemon.attack += 100;
+  }
 
-    // Add Attack points of selected pokemon of Msg Sender
-    function addAttack(uint _id) external payable whenPayEnough {
-        uint _idx = pokemonIdToIdx[_id];
-        Pokemon storage _pokemon = pokemons[_idx];
-        _pokemon.attack += 100;
-    }
-
-    // Add Defense points of selected pokemon of Msg Sender
-    function addDefense(uint _id) external payable whenPayEnough {
-        uint _idx = pokemonIdToIdx[_id];
-        Pokemon storage _pokemon = pokemons[_idx];
-        _pokemon.defense += 100;
-    }
+  // Add Defense points of selected pokemon of Msg Sender
+  function addDefense(uint _id) external payable whenPayEnough {
+    uint _idx = pokemonIdToIdx[_id];
+    Pokemon storage _pokemon = pokemons[_idx];
+    _pokemon.defense += 100;
+  }
 }

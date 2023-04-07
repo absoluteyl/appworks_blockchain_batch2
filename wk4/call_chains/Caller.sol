@@ -2,17 +2,17 @@
 pragma solidity ^0.8.0;
 
 interface ICallee {
-    function getData() external;
+  function getData() external;
 }
 
 contract Caller {
-    address public sender;
-    address public origin;
+  address public sender;
+  address public origin;
 
-    function getDataFromCallee(address _callee) public {
-        ICallee(_callee).getData();
-        
-        sender = msg.sender;
-        origin = tx.origin;
-    }
+  function getDataFromCallee(address _callee) public {
+    ICallee(_callee).getData();
+
+    sender = msg.sender;
+    origin = tx.origin;
+  }
 }
