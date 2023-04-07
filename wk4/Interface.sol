@@ -54,7 +54,3 @@ contract CallInterface {
     // consumed 61175 gas for first call
     // consumed 41510 gas for later calls 
 }
-
-
-
-

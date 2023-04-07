@@ -49,4 +49,3 @@ contract Array {
             return nums;
         }
     }
-}
