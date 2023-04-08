@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "externalFunc",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "publicFunc",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "z",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/wk5/VisibilityTest/A.sol": "A"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/wk5/VisibilityTest/A.sol": {
+			"keccak256": "0x4f0716dbcf4349e894adb9b873ab823f43a446817d7207620cb3bf20426f17f2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a81ad2c0305a2cb3f4a94126245f3b845398a13068f68fca404c2288a1999547",
+				"dweb:/ipfs/QmWkcu7rcwuyXBFkx2D4vkWQFhdr5BcQ3K1puGBFfTQZKV"
+			]
+		}
+	},
+	"version": 1
+}
