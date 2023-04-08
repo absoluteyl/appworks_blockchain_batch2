@@ -77,43 +77,13 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "tasksByCreator",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "uint256",
 						"name": "_idx",
 						"type": "uint256"
 					}
 				],
 				"name": "update",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -146,11 +116,11 @@
 	},
 	"sources": {
 		"appworks_blockchain_batch2/wk5/TodoList.sol": {
-			"keccak256": "0x482d808b26c36e8a3b637631cc3356d04b812b80842761f518d5088b0f3af92c",
+			"keccak256": "0x95dc60ada81c8743e04cd20420405bea09c34885e980ba566bb5201e21212c73",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bc099225a41824c7e9495fdd661c8b0269eba05ac451a01d293f5216a53a7511",
-				"dweb:/ipfs/QmagrrgHmruvb3wGVEzT6ibRs5c69gH86t3WVRcwrB93fL"
+				"bzz-raw://3f782717613a83f47435baf809010e9662fe32ef5d1af5b886edc691fd90fbe2",
+				"dweb:/ipfs/QmbC1tiKStCiiBNEzTzfYJJHjNnufz1vuuSYune1NXg8PL"
 			]
 		}
 	},
