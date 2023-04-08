@@ -63,7 +63,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk3/Payable.sol": "Payable"
+			"appworks_blockchain_batch2/wk3/Payable.sol": "Payable"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -77,12 +77,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk3/Payable.sol": {
-			"keccak256": "0x445c77fa128fc2eb991e5dbf475f5825e10c3c6f8b189efd32419605a61706ee",
+		"appworks_blockchain_batch2/wk3/Payable.sol": {
+			"keccak256": "0xbf21a0cebef9c08171df7e16cc3b070a5a6734e7436fbe0ddbc9b6218c156721",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e2d6eda88432865b965a753cdf37a7ad46a519a8aa6026928b27cb910ef379f1",
-				"dweb:/ipfs/QmVCaCA8RWiTVvja5VwyhTsiHCAUrDFvxWsgD3mv5yGCbi"
+				"bzz-raw://eb94f8c6dcb18ce01f9b3fefbd3023077bcc4ec29905ad71b544cc8218576348",
+				"dweb:/ipfs/QmcF6H8ThtqaKMgQ1a4NVsNLmNib2T5ZkPF7W33RNcMR8u"
 			]
 		}
 	},

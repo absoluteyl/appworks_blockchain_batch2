@@ -56,7 +56,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk3/Constructor.sol": "Constructor"
+			"appworks_blockchain_batch2/wk3/Constructor.sol": "Constructor"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -70,12 +70,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk3/Constructor.sol": {
-			"keccak256": "0x63ac1404cdd3d617e75d5c9400c1dac3c140a1bf38e90e52a52f17393c8fd1db",
+		"appworks_blockchain_batch2/wk3/Constructor.sol": {
+			"keccak256": "0xaa0963540714d0b5b5ea7f1c87c3a1d1b4fe668fae8f979efb2785484961b307",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b4a67098f75412c750adb6f2b15ed58c1bfb05f3fd21aadb22dee38aa926ac9e",
-				"dweb:/ipfs/QmVA5C11xsPdZUogGr7rGqju69ccC7qrhDiS6pzTGwJaRR"
+				"bzz-raw://f8477b25897d5c223a66b3ee3cd2133d8f49020510b46fd9a9adaab4c0583223",
+				"dweb:/ipfs/QmPyu8oke7riQyYXs59XfBSq7xGitb1p43cLFJktDRDosD"
 			]
 		}
 	},

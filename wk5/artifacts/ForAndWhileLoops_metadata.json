@@ -45,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk5/ForAndWhileLoops.sol": "ForAndWhileLoops"
+			"appworks_blockchain_batch2/wk5/ForAndWhileLoops.sol": "ForAndWhileLoops"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -59,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk5/ForAndWhileLoops.sol": {
-			"keccak256": "0x3ee6c5c9989e8bc6ceedffc6ba6a127cf7ef2b3815fab8261bb4c9bf043ec1dd",
+		"appworks_blockchain_batch2/wk5/ForAndWhileLoops.sol": {
+			"keccak256": "0xf430ffdaae9be63a231879b9c95de9cbec5280210c4dc62a33bef6f8d18d2bd8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fe47f45493ec4652e78abd2b3365cb9fd20a0615680075d8bb00b67addfd31f0",
-				"dweb:/ipfs/QmfDWvPGGpx57TDnrvNrLfWdcHVtkVNHf3KV2vF1FwgqNa"
+				"bzz-raw://cdd952353f5532c392e01173b9f5c48751ff1c5eb32509dc499761200e183242",
+				"dweb:/ipfs/QmXMMNjMHjn74gmY9ojKjDbbhxGd3yH48RaJVyAhg3KKrG"
 			]
 		}
 	},

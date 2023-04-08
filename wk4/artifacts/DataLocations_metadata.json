@@ -51,7 +51,7 @@
 						"type": "uint256[]"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -75,7 +75,7 @@
 						"type": "uint256[]"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -116,7 +116,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/DataLocations.sol": "DataLocations"
+			"appworks_blockchain_batch2/wk4/DataLocations.sol": "DataLocations"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -130,12 +130,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/DataLocations.sol": {
-			"keccak256": "0xc6c8ec39f7143d3160e1ee90ff37a9e0bbfc1c49b12b9dcbbfc501e46e317077",
+		"appworks_blockchain_batch2/wk4/DataLocations.sol": {
+			"keccak256": "0x755d7dbe6ec08cecaa5042a374eafb88ddbf37afa7a8ca0c964a4f5baf7d8e4f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://49ba636c17a7d911630c696dfca877a92322ecf3ff078d1b1f375757282e9d05",
-				"dweb:/ipfs/QmP6qJLbpDmYrYVaxqxC1HX2UJPXdh5LoTsWuHLTkaPZd2"
+				"bzz-raw://33e5c71248592a373f4bffe5e32bee99b8d80008d75d79c890a5574fc8afba03",
+				"dweb:/ipfs/QmWtbZDqJXxEyJarp3yWMbBzojT2Mvz4k2gFZ4NAu8Yfbx"
 			]
 		}
 	},

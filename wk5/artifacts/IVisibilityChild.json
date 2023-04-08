@@ -20,7 +20,7 @@
 			"linkReferences": {},
 			"autoDeployLib": true
 		},
-		"goerli:5": {
+		"görli:5": {
 			"linkReferences": {},
 			"autoDeployLib": true
 		},
@@ -28,7 +28,7 @@
 			"linkReferences": {},
 			"autoDeployLib": true
 		},
-		"görli:5": {
+		"goerli:5": {
 			"linkReferences": {},
 			"autoDeployLib": true
 		}
@@ -53,63 +53,23 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"externalFunc()": "42b148aa",
-			"internalFunc()": "95b9d3d9",
+			"examples2()": "c3be8e2c",
 			"publicFunc()": "4b73383f",
-			"y()": "a56dfe4a",
 			"z()": "c5d7802e"
 		}
 	},
 	"abi": [
 		{
 			"inputs": [],
-			"name": "externalFunc",
-			"outputs": [
-				{
-					"internalType": "uint256",
-					"name": "",
-					"type": "uint256"
-				}
-			],
-			"stateMutability": "pure",
-			"type": "function"
-		},
-		{
-			"inputs": [],
-			"name": "internalFunc",
-			"outputs": [
-				{
-					"internalType": "uint256",
-					"name": "",
-					"type": "uint256"
-				}
-			],
-			"stateMutability": "pure",
+			"name": "examples2",
+			"outputs": [],
+			"stateMutability": "view",
 			"type": "function"
 		},
 		{
 			"inputs": [],
 			"name": "publicFunc",
-			"outputs": [
-				{
-					"internalType": "uint256",
-					"name": "",
-					"type": "uint256"
-				}
-			],
-			"stateMutability": "pure",
-			"type": "function"
-		},
-		{
-			"inputs": [],
-			"name": "y",
-			"outputs": [
-				{
-					"internalType": "uint256",
-					"name": "",
-					"type": "uint256"
-				}
-			],
+			"outputs": [],
 			"stateMutability": "view",
 			"type": "function"
 		},

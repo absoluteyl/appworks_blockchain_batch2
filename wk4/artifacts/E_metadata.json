@@ -6,94 +6,30 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "a",
-				"outputs": [
+				"anonymous": false,
+				"inputs": [
 					{
+						"indexed": false,
 						"internalType": "string",
-						"name": "",
+						"name": "message",
 						"type": "string"
 					}
 				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "b",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
+				"name": "Log",
+				"type": "event"
 			},
 			{
 				"inputs": [],
 				"name": "bar",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "c",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "d",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "e",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
 				"name": "foo",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -110,7 +46,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/MultipleInheritance.sol": "E"
+			"appworks_blockchain_batch2/wk4/ParentFunctions.sol": "E"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -124,12 +60,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/MultipleInheritance.sol": {
-			"keccak256": "0xe9e24185042b32634f955dce68215ce45eb87b002904467e460b00a6cc2479ca",
+		"appworks_blockchain_batch2/wk4/ParentFunctions.sol": {
+			"keccak256": "0xc7603e98fa44a4db0e4aabe5d60fe29e85cc8e9d8a96b1cd6b6e035f9a3c134c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b0b5ed919c6b27b16009c4d6b38b0dd7668e8064ef488e585e9daae6ac930c84",
-				"dweb:/ipfs/QmahpLn7qgX1NA7MHzzqDnjewMGMFmxm1WBZAiFzSFUDh9"
+				"bzz-raw://93e393d1440b21f42fbb69f1275a39e605342cf45cf7b8da9c9677af259aafc4",
+				"dweb:/ipfs/QmX5pH9WFzb4p91GkUwJbpk6o6mW9HszuBKAWe6j7V1t7t"
 			]
 		}
 	},

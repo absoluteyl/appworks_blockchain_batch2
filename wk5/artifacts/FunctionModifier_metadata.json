@@ -92,7 +92,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk5/FunctionModifier.sol": "FunctionModifier"
+			"appworks_blockchain_batch2/wk5/FunctionModifier.sol": "FunctionModifier"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -106,12 +106,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk5/FunctionModifier.sol": {
-			"keccak256": "0x44ed4f22249804c02888bb86e887edb7c2e40f5e994e82516894a5736018a267",
+		"appworks_blockchain_batch2/wk5/FunctionModifier.sol": {
+			"keccak256": "0x4de082ea49ef9eb5630f3cb70b6ec04e662801d39aeb8ac58d846ed124d6c01f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1c0962d0beec36de36c96b9b095dd999605738a84ede8ecf8783f49fede247a8",
-				"dweb:/ipfs/QmS5SwVCBM6kWENcDpDDxvd1E822fa675e4MddYYbK6pxT"
+				"bzz-raw://1f4521408a2043a91d35c3ec7dcf32bb7aa3e33f581eb8f2af84b1d9c6681001",
+				"dweb:/ipfs/QmbcrnqFiPvEVqoLHrUY9XkurN9iq35x3uqj5vti6s1cYL"
 			]
 		}
 	},

@@ -69,7 +69,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/Mapping.sol": "Mapping"
+			"appworks_blockchain_batch2/wk4/Mapping.sol": "Mapping"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -83,12 +83,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/Mapping.sol": {
-			"keccak256": "0x90213e8f9eca4a0f5241e1fc94e15613580a228654bea390533786e3d9b34610",
+		"appworks_blockchain_batch2/wk4/Mapping.sol": {
+			"keccak256": "0x84f51a44fb16988e042ed763ec03b9c411912f689430a8dfcd3bb8838cdd65bf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://17b27b4a19ca08b6f5893aa89d58a33cea5f41fd6d25749633503c4cea11611c",
-				"dweb:/ipfs/QmYvvYBchwfCFhSQYfsq8NBVBbzxDPz97MKYwTEBPojGJx"
+				"bzz-raw://ae5ea53129c20b530f49038a6b2dc1c624bf392f5d12d341f6e56b3d398fc36c",
+				"dweb:/ipfs/QmeC9U6f7gpiNyZS1h4enAQXx7vWvVLo7NDzp6ZpF7Ah9d"
 			]
 		}
 	},

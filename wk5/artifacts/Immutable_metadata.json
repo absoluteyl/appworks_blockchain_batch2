@@ -57,7 +57,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk5/Immutable.sol": "Immutable"
+			"appworks_blockchain_batch2/wk5/Immutable.sol": "Immutable"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -71,12 +71,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk5/Immutable.sol": {
-			"keccak256": "0xb384f564951679316278e0b7dc518e65c2c0117b302db80afa5376f053bc8a94",
+		"appworks_blockchain_batch2/wk5/Immutable.sol": {
+			"keccak256": "0x5fcbd641c787ace747fd8d4d3289b356399aae08d305067200f02076305f0692",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3cab9bec3965206d224ca465a2ef0543f2e1d9ff523abfe8c25654176e1c10e5",
-				"dweb:/ipfs/QmP7GgATeVDKB6wVdt4xMzNpFohz69WgmPwo1RoP6WSWJ2"
+				"bzz-raw://f5d5dffe91b7053864338a423339b58cb0cfc111bf0743a88adadfdc5c69dba0",
+				"dweb:/ipfs/QmPNwKkXc4MQDpYpAvWLMNUwgY9Zp8CWnQ3EdFoYdPYB3A"
 			]
 		}
 	},

@@ -202,7 +202,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/ERC20.sol": "IERC20"
+			"appworks_blockchain_batch2/wk4/ERC20.sol": "IERC20"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -216,12 +216,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/ERC20.sol": {
-			"keccak256": "0xc95a4536cb773a1159ea2293ec4a37e8d77a636d7f50f49d7f38f4b45e739fd1",
+		"appworks_blockchain_batch2/wk4/ERC20.sol": {
+			"keccak256": "0xd9913e3701640c38cb24b752c2ac708e469d519f602c52168724886ad4bcab19",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://022d6231aea7f83d3b1c58f2dbdd79e694dff2afffd6ef5f0253a6038466de2f",
-				"dweb:/ipfs/QmUqd1ZbF2wKenMMo1ayhpohk6ytYUs9i4t4Qu6xhmgVai"
+				"bzz-raw://c3df8a623ce60f35148f695c4af2c0bddaff3f8ae26ad8824fe7361d34b47329",
+				"dweb:/ipfs/QmaGiZ2MXcMVjVPoZSgPUUG4CPHbqQEmQxQedr1AteQETS"
 			]
 		}
 	},

@@ -64,7 +64,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk5/Ownable.sol": "Ownable"
+			"appworks_blockchain_batch2/wk5/Ownable.sol": "Ownable"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -78,12 +78,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk5/Ownable.sol": {
-			"keccak256": "0x92053a769612568c388876c7dc5ab0a2b8ad2ce8791c2c5792ded177842fe1f0",
+		"appworks_blockchain_batch2/wk5/Ownable.sol": {
+			"keccak256": "0xdbbfebb1680f88630b04d13d340442e718ed1094638c24b3577d99f9c21d3e2e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b12c38d2a895d219baaadee2520f17a9fe85ad1f6deac1b99929a6ee6b28b4ee",
-				"dweb:/ipfs/QmQ47UtxxzoPzP2ReNv6rMp5oQXc6httQ18RHv5mPG111L"
+				"bzz-raw://320bdec2a4b1d7d670951418447d394c1496cea45f5009d3be6ce8492ba1845b",
+				"dweb:/ipfs/Qmd5wn4PygAqhWxnSam5dmETCuGuRZSBNLYCEC6X4RsMjH"
 			]
 		}
 	},

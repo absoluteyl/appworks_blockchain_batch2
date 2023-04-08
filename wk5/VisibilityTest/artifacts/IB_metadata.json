@@ -15,7 +15,7 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -99,11 +99,11 @@
 	},
 	"sources": {
 		"appworks_blockchain_batch2/wk5/VisibilityTest/C.sol": {
-			"keccak256": "0xa7a7cd12e84ac03456ad7c57f3d22926a482c9d07e876078296abb8f70583c05",
+			"keccak256": "0x2889cb0cf5e0719850df8ab1dc1fb30439a00adec3aed5e4cd5ac1edf5335e92",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://253e693120b73cdd7fb634bdbc90221aeb7d8dc9b8d999e3b345edc45445e4ec",
-				"dweb:/ipfs/QmQMT5gicbFuyevu3RsjGKy35MNoU6MpfjEa8ufbx77WZv"
+				"bzz-raw://47edd9ed9c0f04e60808c1796d8d952110cbc460a0ebdb1376a5ee89e852bc65",
+				"dweb:/ipfs/QmexesHncqPEjK3f4vEuaaTWAgFAbUnVhHzpcEMQQ4DcEq"
 			]
 		}
 	},

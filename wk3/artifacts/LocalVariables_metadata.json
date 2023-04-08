@@ -65,7 +65,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk3/LocalVariables.sol": "LocalVariables"
+			"appworks_blockchain_batch2/wk3/LocalVariables.sol": "LocalVariables"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -79,12 +79,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk3/LocalVariables.sol": {
-			"keccak256": "0x018c6f746f4f9ea536932c35763cdd435d50cbffbe43856cd3c7b7c09e46a22a",
+		"appworks_blockchain_batch2/wk3/LocalVariables.sol": {
+			"keccak256": "0xf07e03d0026bf10c083392a08a5d67cd660bc10a5f9fa17844c01f52e42ec0d0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b687a3a93ad055782af0e5153515082d35710fb5a327c838efa8b4beb93f553e",
-				"dweb:/ipfs/QmZKDYWHz2616jKi2kAUyJDJMHGG9Hzx6zSuWHQQ4kC8BF"
+				"bzz-raw://7b3a2303be17e110d8afc03dd80de55af4e8e192902ddfc848cc9c120880f8f3",
+				"dweb:/ipfs/QmWgrtJ5UZQWfYRxwxuZJtV6YSRujzKyroYQ9R1gFEvDi3"
 			]
 		}
 	},

@@ -96,7 +96,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk3/Enum.sol": "Enum"
+			"appworks_blockchain_batch2/wk3/Enum.sol": "Enum"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -110,12 +110,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk3/Enum.sol": {
-			"keccak256": "0xbcb7ed1667d7bee037028cfe92706f98f81dafbc9aa041cd945886c6d9a0faa6",
+		"appworks_blockchain_batch2/wk3/Enum.sol": {
+			"keccak256": "0x696378b69d36d00943273529ae5a25ee3d8bfbe8b2ee8f2514a0d2a54ad58217",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7eecaccb9a70102e8d5c80a459c7a68d4c2049246e140a641ea6c8f42cb8d82e",
-				"dweb:/ipfs/QmVEBZFmNmoyjX85KRqJDMe5CRpSzR4uyCvo8dtydX4tKJ"
+				"bzz-raw://978ced98926723ee38e19a011b2a391cee85a6ad574f25a8c57d3091b92bc240",
+				"dweb:/ipfs/QmYN2Nbz9hQ1fStDriLffi6XeDhJo7Xz3jjieYMUwcYNDh"
 			]
 		}
 	},

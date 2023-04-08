@@ -46,7 +46,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/ParentFunctions.sol": "F"
+			"appworks_blockchain_batch2/wk4/ParentFunctions.sol": "F"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -60,12 +60,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/ParentFunctions.sol": {
-			"keccak256": "0xc018d789fb714406618de07bb8637a03f07cbfa63a4b1aae9a074e16c6c0ce0f",
+		"appworks_blockchain_batch2/wk4/ParentFunctions.sol": {
+			"keccak256": "0xc7603e98fa44a4db0e4aabe5d60fe29e85cc8e9d8a96b1cd6b6e035f9a3c134c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1da55013a7ec0466f3d7ae528b5b9a08853b6950c32fcae5c3e6528e3c651f21",
-				"dweb:/ipfs/QmbRmzHZJGHdRdVq9RiMv7H2Xm5srGNGNP4bDzhE4iN3Fy"
+				"bzz-raw://93e393d1440b21f42fbb69f1275a39e605342cf45cf7b8da9c9677af259aafc4",
+				"dweb:/ipfs/QmX5pH9WFzb4p91GkUwJbpk6o6mW9HszuBKAWe6j7V1t7t"
 			]
 		}
 	},

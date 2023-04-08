@@ -97,7 +97,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/Bytes.sol": "Bytes"
+			"appworks_blockchain_batch2/wk4/Bytes.sol": "Bytes"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -111,12 +111,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/Bytes.sol": {
-			"keccak256": "0x0af30d23bddcbbfc5d488fa836e3862efa8e964175a51265c39810739833fb19",
+		"appworks_blockchain_batch2/wk4/Bytes.sol": {
+			"keccak256": "0xc8697573dddf1425e5ce90eb4b8876bf33d5fd29d1e12a35c9cee6be5b9f0940",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9371ce3a2693905caf13d8fadd14b17ebbe8918ac9388e20a71e5027c606671d",
-				"dweb:/ipfs/QmYffWTVjCLzgMZfeHzyXPri8pW9zyGKqYF6x6cmUDaaba"
+				"bzz-raw://2d5c43920064f562baa87b02448b253c4618c5135b94c6924cdf1562d8e33a1c",
+				"dweb:/ipfs/QmTTLipXGZZhgCwcBgWMMB2T2w7KFnYR8n4wBVvhy1ixaw"
 			]
 		}
 	},

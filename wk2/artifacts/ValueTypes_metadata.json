@@ -125,11 +125,11 @@
 	},
 	"sources": {
 		"appworks_blockchain_batch2/wk2/ValueTypes.sol": {
-			"keccak256": "0xf6b70bf8dcab77357acc728099fe6e8ab133dabcb4eab0d3d77f598555e618b8",
+			"keccak256": "0x056caa1a85a1ea7c69d0a9770ba82c75b5cc919dcc6733a3185a2b8fd1d2dbf4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8a4cd3304b789bda21ed8ae163fe91423af8bc344f33a037fb7103c68cc9ad44",
-				"dweb:/ipfs/QmQqQvUfhV8qwKGwkmMvwm45CwGu59fmKUdTDgTpega7pQ"
+				"bzz-raw://1e8a9a26e0073e8ddc606e0794556e4ae445848aa971ad57420941c3e5b61ba8",
+				"dweb:/ipfs/QmeaSbohAetaNgqF3UBhA1oFrkGXijvkUVwNgQKt8Z3N2f"
 			]
 		}
 	},

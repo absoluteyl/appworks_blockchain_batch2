@@ -122,7 +122,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk5/AccessControl.sol": "AccessControl"
+			"appworks_blockchain_batch2/wk5/AccessControl.sol": "AccessControl"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -136,12 +136,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk5/AccessControl.sol": {
-			"keccak256": "0xbdad4c7056639724c899cfb16bcb931c52007c2989fe69447971c68c9883529f",
+		"appworks_blockchain_batch2/wk5/AccessControl.sol": {
+			"keccak256": "0x897322c21679720e8c0e24bf9aae99c51c7bdb343c209e078ea3cfb77df69f65",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d9f7b5c73cba6177dd960e57453e36ae92e032f7afe8a4f642df6a9ca07cb322",
-				"dweb:/ipfs/QmSF38n8HqeApVoAk73Pdw7hNMRbBnF8jYUPTtGCQT3mV5"
+				"bzz-raw://6f186d41e24957f22f7d678da11317dda75ce8408f1cd0d26ab2815ef474f23e",
+				"dweb:/ipfs/QmRBSiYsvPXYUdWJo3qQYiKn6SnGJ7UGRLaRoS5CcYH4bK"
 			]
 		}
 	},

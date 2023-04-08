@@ -7,7 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "a",
+				"name": "bar",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -20,7 +20,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "bar",
+				"name": "baz",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -58,7 +58,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/MultipleInheritance.sol": "A"
+			"appworks_blockchain_batch2/wk4/Inheritance.sol": "A"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -72,12 +72,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/MultipleInheritance.sol": {
-			"keccak256": "0xe9e24185042b32634f955dce68215ce45eb87b002904467e460b00a6cc2479ca",
+		"appworks_blockchain_batch2/wk4/Inheritance.sol": {
+			"keccak256": "0x6215fa9b305816a530f5586a1e677fc7dca477d043103d29904302f7848d99a0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b0b5ed919c6b27b16009c4d6b38b0dd7668e8064ef488e585e9daae6ac930c84",
-				"dweb:/ipfs/QmahpLn7qgX1NA7MHzzqDnjewMGMFmxm1WBZAiFzSFUDh9"
+				"bzz-raw://072e56dcb79e2f9b6c55c8d7137778cdc81893732e3f14d7caceca667efbcdc3",
+				"dweb:/ipfs/QmUCKkhyhBTxHujQRopZ9qbV7cG1xy86HAyRkzMWnM2oid"
 			]
 		}
 	},

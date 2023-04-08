@@ -15,7 +15,7 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -45,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk3/StateVariables.sol": "StateVariables"
+			"appworks_blockchain_batch2/wk3/StateVariables.sol": "StateVariables"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -59,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk3/StateVariables.sol": {
-			"keccak256": "0x8158c0c8d388b2ca217cf79d3f77ea525e7af2aca386becf94c16c3f9ee8a4b9",
+		"appworks_blockchain_batch2/wk3/StateVariables.sol": {
+			"keccak256": "0x60babe24fc2814771526e5f119f87fb93da414216c7fafdf873328fc1c0345ee",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e63cb3f658117c1c51cedc1291644d043176772dbcaf0ea205933242d745212c",
-				"dweb:/ipfs/QmZn4LvEdzoHgGKBqFn5zFxaHcGmYkC8kj6VUDxgiCsxB6"
+				"bzz-raw://b92e15b0659f843f39a27693d9178c2263b0ae1f31cd2cc2119979c2dce915b2",
+				"dweb:/ipfs/QmcWMF5mFcbYZE4dHk7Ej4MrdGJfppVxXrYVZv6NbzoWVM"
 			]
 		}
 	},

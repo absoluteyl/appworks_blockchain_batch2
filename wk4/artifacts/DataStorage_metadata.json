@@ -108,7 +108,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/DataStorage.sol": "DataStorage"
+			"appworks_blockchain_batch2/wk4/DataStorage.sol": "DataStorage"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -122,12 +122,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/DataStorage.sol": {
-			"keccak256": "0xb437ee9a1111eb3694b806c60cef8772825bedde1dee115bed62d73401d4bf41",
+		"appworks_blockchain_batch2/wk4/DataStorage.sol": {
+			"keccak256": "0x43c06284acfac3f11931c73c5970243e20c9677a72f0de9a6862f6f4dbd1a5a1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://65a21d3c70f7a3c3bce03449663e765d8feed9c2cf5f3c176b2fcb4f9693b190",
-				"dweb:/ipfs/QmcQ1WqNgvVNkc8CYUCY1kzYgwJcwvfSQWFQNuRfdxKqHF"
+				"bzz-raw://d1c672c3486d6013806b26e7e71ebb5c7b0716e6e9061a913c10430155bb2a16",
+				"dweb:/ipfs/QmX4ASKyeck1kU8PeTxKWBvt7LEmRTJPoyAuEgqLziT7aU"
 			]
 		}
 	},

@@ -72,7 +72,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk5/Visibility.sol": "VisibilityChild"
+			"appworks_blockchain_batch2/wk5/Visibility.sol": "VisibilityChild"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -86,12 +86,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk5/Visibility.sol": {
-			"keccak256": "0xc3b52845f6e3789d736e58407525493f09d810a247c8fb6526e351d626ffd34e",
+		"appworks_blockchain_batch2/wk5/Visibility.sol": {
+			"keccak256": "0x3750bde4cd9cab82712e0811e4e7ad1b6e5769c716c4a90769bbb85818369a98",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4942e2ffa8299438d997ac4cde8f73363c378e06dfd2568d8f85a44ca32c65e2",
-				"dweb:/ipfs/Qmcu2N2EdBk2gM1Qv6vrfQtFkdZwhkTr7qH2hqJd71Etbu"
+				"bzz-raw://3ad08ca036d18876bb1a0b3f6f2010d961e5c3b2ad395d55b681bbd41416bddf",
+				"dweb:/ipfs/QmQrosgN4c8aHa8oWTi31Ws1jczscUnU9yhH7GeSgByWf1"
 			]
 		}
 	},

@@ -133,7 +133,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/ErrorHandle.sol": "ErrorHandle"
+			"appworks_blockchain_batch2/wk4/ErrorHandle.sol": "ErrorHandle"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -147,12 +147,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/ErrorHandle.sol": {
-			"keccak256": "0xc9f7b9251dbfeb9525b716d017c194c60277891692b6580365123d51a27a2f79",
+		"appworks_blockchain_batch2/wk4/ErrorHandle.sol": {
+			"keccak256": "0xdcee8d14bee08d9c87e8675bd0a19e7b9cdb54ed80bc607a1d0de3dce65057f3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://07061b9f737109f19e4df3798e2e0ac7189d3d0396d004cf9516e7a757e4649c",
-				"dweb:/ipfs/QmPcodauMKBMuMQe2asXhf9E7XKRRu4HnstrqWFoWWFbqT"
+				"bzz-raw://4cc5b361135085856a18487736ac574eca6958549c4173d6bf8ac78348173cb1",
+				"dweb:/ipfs/QmSFfiVkgHXkuaHahvbzhpUfrPU1MW8djyuE1naUFJrwqK"
 			]
 		}
 	},

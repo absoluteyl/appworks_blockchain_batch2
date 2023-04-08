@@ -6,25 +6,15 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "globalVars",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "_address",
 						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
+				"name": "examples3",
+				"outputs": [],
 				"stateMutability": "view",
 				"type": "function"
 			}
@@ -42,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/wk3/GlobalVariables.sol": "GlobalVariables"
+			"appworks_blockchain_batch2/wk5/Visibility.sol": "AnotherContract"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -56,12 +46,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/wk3/GlobalVariables.sol": {
-			"keccak256": "0xec2ec22bd9750b9b6ec1511fd336f1e8a89c93d4bea832519de9bdf1b8240a59",
+		"appworks_blockchain_batch2/wk5/Visibility.sol": {
+			"keccak256": "0x690132f7d923c3e4ca2c290fab72bfe2abc5037fa1a7f1a66f1a6a4c39a4ad36",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4074ac543f23c65d9d6ea887f0c3d2f4b9ea0b08f1732313976d99546487be1b",
-				"dweb:/ipfs/QmejrJdQDkiGw3gkjGo9uj6H676oaZp5Bppe9QLBVSCZgG"
+				"bzz-raw://a881f8c4d4d7ca91d7977132d9e0cfe0178ff5d7cc7b16bad4030c473ff74dfe",
+				"dweb:/ipfs/QmV3iMbUacdTEdFYmA5iCLbvWjxgsjvPAxCxdDFyDUVpNm"
 			]
 		}
 	},

@@ -7,19 +7,21 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "payable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "kill",
+				"name": "examples2",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "test",
+				"name": "publicFunc",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "z",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -27,7 +29,7 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -44,7 +46,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/wk5/Kill.sol": "Kill"
+			"appworks_blockchain_batch2/wk5/Visibility.sol": "IVisibilityChild"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -58,12 +60,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/wk5/Kill.sol": {
-			"keccak256": "0x3f552b005148da9e1e4e327b81ad346f5d2ebaa098d11cba3cf48492b8f0ac30",
+		"appworks_blockchain_batch2/wk5/Visibility.sol": {
+			"keccak256": "0x690132f7d923c3e4ca2c290fab72bfe2abc5037fa1a7f1a66f1a6a4c39a4ad36",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4e819ce71b5da367d26415078ff056f3c4d408510fd07102ad671268e7312faf",
-				"dweb:/ipfs/QmY9y1DmbruAuxgjigg2pCZPfNYEEgcdpV8nD3Mo2248vm"
+				"bzz-raw://a881f8c4d4d7ca91d7977132d9e0cfe0178ff5d7cc7b16bad4030c473ff74dfe",
+				"dweb:/ipfs/QmV3iMbUacdTEdFYmA5iCLbvWjxgsjvPAxCxdDFyDUVpNm"
 			]
 		}
 	},

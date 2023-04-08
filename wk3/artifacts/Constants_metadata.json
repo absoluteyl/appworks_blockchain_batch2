@@ -45,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk3/Constants.sol": "Constants"
+			"appworks_blockchain_batch2/wk3/Constants.sol": "Constants"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -59,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk3/Constants.sol": {
-			"keccak256": "0xe60fe07a574ccb47dd5b05f78ef29e4473dab999fec99a0fdbd664a5766271e7",
+		"appworks_blockchain_batch2/wk3/Constants.sol": {
+			"keccak256": "0x2229a94aad4a5f48ada1fc7f864642afb54aa5d967e8aaabac86105a4bbe5e98",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://17d734f69481d3339d98dfcbdb33791ff25a006aa67bcc2c8c27494459606678",
-				"dweb:/ipfs/QmPkYntEFwTMdf9fUgNZeFqPcjTAEAmNKEyC3crm5Z6XUW"
+				"bzz-raw://3760356be4d82c11f114fb0acf0d45d9a5923a7132324bbedb3b55eccd8adfc3",
+				"dweb:/ipfs/QmYTwHbSUwMggQsj6p9vH14NHeRGobZnxZYne5K68xcdMi"
 			]
 		}
 	},

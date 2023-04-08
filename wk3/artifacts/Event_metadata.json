@@ -107,7 +107,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk3/Event.sol": "Event"
+			"appworks_blockchain_batch2/wk3/Event.sol": "Event"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -121,12 +121,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk3/Event.sol": {
-			"keccak256": "0x2594201d384fb5e50b5d42435f72c703de1c7ed4b844f0fa567014b7060da1ba",
+		"appworks_blockchain_batch2/wk3/Event.sol": {
+			"keccak256": "0x92d778cc59abc26f80891a7348e3854a4ca2e29d02e417fc2c9ee3be36bb9717",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://57d6ffdf0ff155aa7990f03b582c217a344fc4d58262d765419e973681718fa3",
-				"dweb:/ipfs/QmS7qKNpuQagBdSufkfwFh27pCSL5vV8sUiafwSTt2mZq6"
+				"bzz-raw://b6a7f4118d3c735b4306019e11458240e721a6dc95c99d208b3b45bb172be18d",
+				"dweb:/ipfs/QmNrUgEV59EuVH5AiCZ8wQJys4WtDfbQtF9nzJC9Mj35Yt"
 			]
 		}
 	},

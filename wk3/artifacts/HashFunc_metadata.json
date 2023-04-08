@@ -173,7 +173,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk3/Hash.sol": "HashFunc"
+			"appworks_blockchain_batch2/wk3/Hash.sol": "HashFunc"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -187,12 +187,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk3/Hash.sol": {
-			"keccak256": "0x86492c7b93241e975a042f3d82ae676560470443e157ea55025170fa76a38961",
+		"appworks_blockchain_batch2/wk3/Hash.sol": {
+			"keccak256": "0x38daeef11e4414454226021511c26479b6a17cfb3a553cdf9e8f715448385809",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://205dd50a8da1a3511814138ee439f7119b401ed872a248e51ecd0d78896f94b3",
-				"dweb:/ipfs/QmcvJeUMCZbbcZxsrZ7Wc2DUPwP1TGGyJrC6PeoXCzyXAM"
+				"bzz-raw://6349f644990990cdd40400ec381d57d986829f5d1741df70c6659ab1072d10e9",
+				"dweb:/ipfs/Qmb73ASU6WPqaxAwG2JgS9oKWZ2hBpkQh7Ub7PtLGbPY1s"
 			]
 		}
 	},

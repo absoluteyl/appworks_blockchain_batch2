@@ -58,7 +58,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"appworks_blockchain_batch2/contracts/wk4/MultipleInheritance.sol": "X"
+			"appworks_blockchain_batch2/wk4/MultipleInheritance.sol": "X"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -72,12 +72,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"appworks_blockchain_batch2/contracts/wk4/MultipleInheritance.sol": {
-			"keccak256": "0xe9e24185042b32634f955dce68215ce45eb87b002904467e460b00a6cc2479ca",
+		"appworks_blockchain_batch2/wk4/MultipleInheritance.sol": {
+			"keccak256": "0x61ce7ba2b91af90807f916779df631f187db931d9150da958d7691e17bd9603b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b0b5ed919c6b27b16009c4d6b38b0dd7668e8064ef488e585e9daae6ac930c84",
-				"dweb:/ipfs/QmahpLn7qgX1NA7MHzzqDnjewMGMFmxm1WBZAiFzSFUDh9"
+				"bzz-raw://9e213dec20da2d98198aeccf9d700fb8c02bcd46bb1940131f4412b8809e4e77",
+				"dweb:/ipfs/QmV9QMf56MbVtqMPx9TwrCdaZFmYFbbs6x5sSLgP8GktZ2"
 			]
 		}
 	},
