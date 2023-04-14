@@ -9,7 +9,7 @@ contract Payable {
     owner = payable(msg.sender);
   }
 
-  // A function can only receive Ether if it is marked as payable.
+  // Functions can receive Ether only when it's marked as payable.
   function deposit() external payable {}
 
   function getBalance() external view returns (uint) {
