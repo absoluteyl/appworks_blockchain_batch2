@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/wk6/MyWeth.sol": "IWETH9"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/wk6/MyWeth.sol": {
+			"keccak256": "0xd45d52503d6da54637c4737a9bc51b5725575e5760f44aff47e02419a06e0c5d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d4f2085290331b77ef6a5bba23dc78a407b8fd9c3c0faac6bee4d09172e59070",
+				"dweb:/ipfs/QmPBoUrJsSFUnjBeaMckoNSy2p98ZW9ayF16abTMnD7Fci"
+			]
+		}
+	},
+	"version": 1
+}
