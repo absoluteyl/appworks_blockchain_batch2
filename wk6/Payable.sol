@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// ref: https://www.youtube.com/watch?v=A4VMhRIWSs0
 contract Payable {
   address payable public owner;
 
