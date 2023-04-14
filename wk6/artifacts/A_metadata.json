@@ -1,0 +1,121 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "ALog",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_baddr",
+						"type": "address"
+					}
+				],
+				"name": "callB",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_baddr",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_caddr",
+						"type": "address"
+					}
+				],
+				"name": "callC",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_baddr",
+						"type": "address"
+					}
+				],
+				"name": "delegatecallB",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_baddr",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_caddr",
+						"type": "address"
+					}
+				],
+				"name": "delegatecallC",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/wk6/DelegateCall.sol": "A"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/wk6/DelegateCall.sol": {
+			"keccak256": "0xac7b9abd20aee568296c8e0a04191bfcb4c1d800558ec2f14c7753b1b87c3aa0",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://50db05b0ed69e99926f26e6d2681b6f4fd08869f60b76af7c7004287ac875707",
+				"dweb:/ipfs/QmZKWEmPxZWHx6dSa8v1RXsmMZUNfNKPb4UiK1U7MEyHkt"
+			]
+		}
+	},
+	"version": 1
+}
