@@ -16,7 +16,7 @@
 
 ## 檔案目錄
 
-```
+```bash
 .
 ├── Client.js
 ├── EthPriceOracle.js
