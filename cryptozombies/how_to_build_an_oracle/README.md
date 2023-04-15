@@ -40,9 +40,43 @@
 
 ```
 
-## 和 Oracle 互動的 Contract - Caller Contract
+## 角色與流程
 
-Caller Contract 需要有這些資訊才能夠和 Oracle Contract 互動：
+```mermaid
+sequenceDiagram
 
-- The address of the oracle smart contract
-- The signature of the function you want to call
+participant Client
+
+participant CallerContract
+participant OracleContract
+
+participant EthPriceOracle
+participant 3rdPartyPriceSource
+
+Client->>CallerContract: setOracleInstanceAddress()
+Client->>CallerContract: updateEthPrice()
+activate CallerContract
+CallerContract->>+OracleContract: getLatestEthPrice()
+OracleContract->>-CallerContract: return requestId
+deactivate CallerContract
+
+Note over OracleContract,EthPriceOracle: emit GetLatestEthPriceEvent
+
+EthPriceOracle->>+EthPriceOracle: Keep Listen Oracle Events
+EthPriceOracle->>-EthPriceOracle: addRequestToQueue()
+
+loop
+ EthPriceOracle->>+EthPriceOracle: processQueue()
+ EthPriceOracle->>+3rdPartyPriceSource: retrieveLatestEthPrice()
+ 3rdPartyPriceSource->>-EthPriceOracle: return price
+ EthPriceOracle->>-OracleContract: setLatestEthPrice()
+ activate OracleContract
+ OracleContract->>+CallerContract: callback()
+ deactivate OracleContract
+ Note over OracleContract,EthPriceOracle: emit SetLatestEthPriceEvent
+ CallerContract->>-CallerContract: update price
+ Note over CallerContract,Client: emit PriceUpdatedEvent
+end
+
+Client->>Client: Keep Listen Caller Events
+```
