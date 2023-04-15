@@ -13,7 +13,6 @@ contract CallerContract is Ownable {
   // 因為向 Oracle Contract 發送請求是非同步的，所以我們需要一個 mapping 來記錄每個請求的狀態
   mapping(uint256 => bool) private myRequests;
 
-
   event newOracleAddressEvent(address oracleAddress);
   event ReceivedNewRequestIdEvent(uint256 id);
   event PriceUpdatedEvent(uint256 ethPrice, uint256 id);
