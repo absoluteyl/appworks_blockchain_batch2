@@ -11,22 +11,37 @@
 - 安裝需要的 package 們 (Crypto Zombies 教學中裝的 package 有的蠻老舊了，不用照著裝)
 
     ```bash
-    $npm install @openzeppelin/contracts
+    $npm install @openzeppelin/contracts bn.js axios fs web3
     ```
 
 ## 檔案目錄
 
 ```
 .
+├── Client.js
+├── EthPriceOracle.js
 ├── README.md
 ├── caller
 │   ├── CallerContract.sol
-│   └── EthPriceOracleInterface.sol
+│   ├── EthPriceOracleInterface.sol
+│   ├── artifacts
+│   └── caller_private_key
 ├── oracle
 │   ├── CallerContractInterface.sol
-│   └── EthPriceOracle.sol
+│   ├── EthPriceOracle.sol
+│   ├── artifacts
+│   │   ├── CallerContractInterface.json
+│   │   ├── CallerContractInterface_metadata.json
+│   │   ├── EthPriceOracle.json
+│   │   └── EthPriceOracle_metadata.json
+│   │  
+│   └── oracle_private_key
 ├── package-lock.json
-└── package.json
+├── package.json
+├── scripts
+│   └── gen-key.js
+└── utils
+    └── common.js
 
 ```
 
