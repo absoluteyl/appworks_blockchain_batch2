@@ -30,11 +30,6 @@
 │   ├── CallerContractInterface.sol
 │   ├── EthPriceOracle.sol
 │   ├── artifacts
-│   │   ├── CallerContractInterface.json
-│   │   ├── CallerContractInterface_metadata.json
-│   │   ├── EthPriceOracle.json
-│   │   └── EthPriceOracle_metadata.json
-│   │  
 │   └── oracle_private_key
 ├── package-lock.json
 ├── package.json
