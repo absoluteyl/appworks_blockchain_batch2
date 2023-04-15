@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ethPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "callback",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/cryptozombies/how_to_build_an_oracle/oracle/CallerContractInterface.sol": "CallerContractInterface"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/cryptozombies/how_to_build_an_oracle/oracle/CallerContractInterface.sol": {
+			"keccak256": "0x26aadc138504acce03c0eb270fa82702ceb38bc2295c93d0d0cf62d5bdf845b7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9ae5330bac479ccdf8984229e23a425a4d11d65556f61a3747bcf7fe5f053f52",
+				"dweb:/ipfs/QmUhKcE7DEFHFp84dar4qXFCmyXYFbRXU3wHJbLDJnxdhS"
+			]
+		}
+	},
+	"version": 1
+}

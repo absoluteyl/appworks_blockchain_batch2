@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getLatestEthPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"appworks_blockchain_batch2/cryptozombies/how_to_build_an_oracle/caller/EthPriceOracleInterface.sol": "EthPriceOracleInterface"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"appworks_blockchain_batch2/cryptozombies/how_to_build_an_oracle/caller/EthPriceOracleInterface.sol": {
+			"keccak256": "0xcc47b309bb4895ae2a396618da83d68321a57fe298401a06f8ca10f30c59f830",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a98f32f98ea99bce70ede3c53971763c8c1c6ad531ceb8e8fe08a5241926408d",
+				"dweb:/ipfs/QmPEABT7ASwr7MCV9CPxtKdYy2hww58Hb5f695AF9jLkmk"
+			]
+		}
+	},
+	"version": 1
+}
