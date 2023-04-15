@@ -57,7 +57,7 @@ async function processRequest(oracleContract, ownerAddress, id, callerAddress) {
   while (retries < MAX_RETRIES) {
     try {
       // 從 Binance API 拉取 ETH 價格，這邊不太重要所以沒有特別定義
-      const ethPrice = await client.retrieveLatestEthPrice()
+      const ethPrice = await retrieveLatestEthPrice()
       // 從 Binance 拉回的價格是浮點數，因為 EVM 不支援符點數所以需要對資料格式做處理後回傳給 Oracle Contract
       await setLatestEthPrice(oracleContract, callerAddress, ownerAddress, ethPrice, id)
       return
