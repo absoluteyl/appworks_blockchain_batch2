@@ -13,8 +13,6 @@ interface IWETH9 {
 // Withdraw => 將與 _amount 數量的 ethers 從合約中轉給 user，並 burn 掉對應數量的 token
 // Receive => 將與 msg.value 量的 erc20 token 轉給 user
 contract MyWeth is IWETH9 {
-  event Deposit(address indexed from, address indexed to, uint amount);
-  event Withdraw(address indexed from, address indexed to, uint amount);
   event Transfer(address indexed from, address indexed to, uint amount);
   event Approval(address indexed owner, address indexed spender, uint amount);
 
@@ -92,7 +90,6 @@ contract MyWeth is IWETH9 {
   // Deposit => 將與 msg.value 量相同的 erc20 token 轉給 user
   function deposit() external payable override {
     mint(msg.value);
-    emit Deposit(address(this), msg.sender, msg.value);
   }
 
   // Withdraw => 將與 _amount 數量的 ethers 從合約中轉給 user，並 burn 掉對應數量的 token
@@ -100,11 +97,7 @@ contract MyWeth is IWETH9 {
     require(balanceOf[msg.sender] >= _amount, "Insufficient balance");
     burn(_amount);
     (bool result,) = payable(msg.sender).call{value: _amount}("");
-    if (result) {
-      emit Withdraw(msg.sender, address(this), _amount);
-    } else {
-      revert("Transfer failed");
-    }
+    require(result, "Transfer failed");
   }
 
   // Receive => 將與 msg.value 量的 erc20 token 轉給 user

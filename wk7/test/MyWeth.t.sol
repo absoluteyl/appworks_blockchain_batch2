@@ -8,8 +8,6 @@ contract MyWethTest is Test {
   MyWeth instance;
   address user;
 
-  event Deposit(address indexed from, address indexed to, uint amount);
-  event Withdraw(address indexed from, address indexed to, uint amount);
   event Transfer(address indexed from, address indexed to, uint amount);
   event Approval(address indexed owner, address indexed spender, uint amount);
 
