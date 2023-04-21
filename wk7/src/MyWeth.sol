@@ -71,6 +71,7 @@ contract MyWeth is IWETH9 {
 
     return true;
   }
+  // ↑↑↑ 實作 ERC20 的部份 ↑↑↑
 
   // NOT ERC20 Standard functions
   // Mint new tokens
@@ -86,7 +87,6 @@ contract MyWeth is IWETH9 {
     totalSupply -= amount;
     emit Transfer(msg.sender, address(0), amount);
   }
-  // ↑↑↑ 實作 ERC20 的部份 ↑↑↑
 
   // ↓↓↓ 課堂練習的部份 ↓↓↓
   // Deposit => 將與 msg.value 量相同的 erc20 token 轉給 user
