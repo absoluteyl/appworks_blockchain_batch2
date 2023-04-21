@@ -36,7 +36,7 @@ contract MyWeth is IWETH9 {
   function transfer(
     address recipient,
     uint amount
-  ) external returns (bool) {
+  ) public returns (bool) {
     balanceOf[msg.sender] -= amount;
     balanceOf[recipient]  += amount;
     emit Transfer(msg.sender, recipient, amount);
@@ -49,7 +49,7 @@ contract MyWeth is IWETH9 {
   function approve(
     address spender,
     uint amount
-  ) external returns (bool) {
+  ) public returns (bool) {
     allowance[msg.sender][spender] = amount;
     emit Approval(msg.sender, spender, amount);
 
@@ -61,7 +61,7 @@ contract MyWeth is IWETH9 {
     address sender,
     address recipient,
     uint amount
-  ) external returns (bool) {
+  ) public returns (bool) {
     // 先確認 allowance 金額
     allowance[sender][msg.sender] -= amount;
     // 實際轉帳
@@ -74,14 +74,14 @@ contract MyWeth is IWETH9 {
 
   // NOT ERC20 Standard functions
   // Mint new tokens
-  function mint(uint amount) external {
+  function mint(uint amount) public {
     balanceOf[msg.sender] += amount;
     totalSupply += amount;
     emit Transfer(address(0), msg.sender, amount);
   }
 
   // Burn some tokens
-  function burn(uint amount) external {
+  function burn(uint amount) public {
     balanceOf[msg.sender] -= amount;
     totalSupply -= amount;
     emit Transfer(msg.sender, address(0), amount);
