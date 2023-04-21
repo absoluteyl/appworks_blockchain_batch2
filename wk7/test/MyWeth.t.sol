@@ -48,7 +48,7 @@ contract MyWethTest is Test {
     emit Transfer(address(instance), user1, 0.5 * 10**18);
     instance.deposit{value: 0.5 ether}();
 
-    assertEq(instance.balanceOf(user1),  0.5 * 10**18);
+    assertEq(instance.balanceOf(user1), 0.5 * 10**18);
     assertEq(address(instance).balance, 0.5 ether);
     assertEq(address(user1).balance, 0.5 ether);
     assertEq(instance.totalSupply(), 0.5 * 10**18);
@@ -88,7 +88,7 @@ contract MyWethTest is Test {
     emit Transfer(address(instance), user1, 0.9 ether);
     instance.deposit{value: 0.9 ether}();
 
-    assertEq(instance.balanceOf(user1),  0.9 * 10**18);
+    assertEq(instance.balanceOf(user1), 0.9 * 10**18);
     assertEq(address(instance).balance, 0.9 ether);
     assertEq(address(user1).balance, 0.1 ether);
     assertEq(instance.totalSupply(), 0.9 * 10**18);
@@ -101,11 +101,11 @@ contract MyWethTest is Test {
     emit Transfer(user1, user2, 0.3 * 10**18);
     instance.transfer(user2, 0.3 * 10**18);
 
-    assertEq(instance.balanceOf(user1),  0.6 * 10**18);
-    assertEq(instance.balanceOf(user2),  0.3 * 10**18);
-    assertEq(address(instance).balance,  0.9 * 10**18);
-    assertEq(address(user1).balance,  0.1 * 10**18);
-    assertEq(address(user2).balance,  0);
+    assertEq(instance.balanceOf(user1), 0.6 * 10**18);
+    assertEq(instance.balanceOf(user2), 0.3 * 10**18);
+    assertEq(address(instance).balance, 0.9 * 10**18);
+    assertEq(address(user1).balance, 0.1 * 10**18);
+    assertEq(address(user2).balance, 0);
     assertEq(instance.totalSupply(), 0.9 * 10**18);
 
     vm.stopPrank();
@@ -143,7 +143,7 @@ contract MyWethTest is Test {
     emit Transfer(address(instance), user1, 0.9 ether);
     instance.deposit{value: 0.9 ether}();
 
-    assertEq(instance.balanceOf(user1),  0.9 * 10**18);
+    assertEq(instance.balanceOf(user1), 0.9 * 10**18);
     assertEq(address(instance).balance, 0.9 ether);
     assertEq(address(user1).balance, 0.1 ether);
     assertEq(instance.totalSupply(), 0.9 * 10**18);
@@ -157,11 +157,11 @@ contract MyWethTest is Test {
     instance.approve(user2, 0.7 * 10**18);
 
     assertEq(instance.allowance(user1, user2), 0.7 * 10**18);
-    assertEq(instance.balanceOf(user1),  0.9 * 10**18);
-    assertEq(instance.balanceOf(user2),  0);
-    assertEq(address(instance).balance,  0.9 ether);
-    assertEq(address(user1).balance,  0.1 ether);
-    assertEq(address(user2).balance,  0 ether);
+    assertEq(instance.balanceOf(user1), 0.9 * 10**18);
+    assertEq(instance.balanceOf(user2), 0);
+    assertEq(address(instance).balance, 0.9 ether);
+    assertEq(address(user1).balance, 0.1 ether);
+    assertEq(address(user2).balance, 0 ether);
     assertEq(instance.totalSupply(), 0.9 * 10**18);
 
     vm.stopPrank();
@@ -177,13 +177,13 @@ contract MyWethTest is Test {
     instance.transferFrom(user1, user3, 0.3 * 10**18);
 
     assertEq(instance.allowance(user1, user2), 0.4 * 10**18);
-    assertEq(instance.balanceOf(user1),  0.6 * 10**18);
-    assertEq(instance.balanceOf(user2),  0);
-    assertEq(instance.balanceOf(user3),  0.3 * 10**18);
-    assertEq(address(instance).balance,  0.9 ether);
-    assertEq(address(user1).balance,  0.1 ether);
-    assertEq(address(user2).balance,  0);
-    assertEq(address(user3).balance,  0);
+    assertEq(instance.balanceOf(user1), 0.6 * 10**18);
+    assertEq(instance.balanceOf(user2), 0);
+    assertEq(instance.balanceOf(user3), 0.3 * 10**18);
+    assertEq(address(instance).balance, 0.9 ether);
+    assertEq(address(user1).balance, 0.1 ether);
+    assertEq(address(user2).balance, 0);
+    assertEq(address(user3).balance, 0);
     assertEq(instance.totalSupply(), 0.9 * 10**18);
 
     vm.stopPrank();
