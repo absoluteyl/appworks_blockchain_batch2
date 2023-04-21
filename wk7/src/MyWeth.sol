@@ -30,11 +30,16 @@ contract MyWeth is IWETH9 {
   string public symbol   = "ABT";
   uint8  public decimals = 18; // token 是多少進制
 
+  modifier checkBalance(uint amount) {
+    require(balanceOf[msg.sender] >= amount, "Insufficient balance");
+    _;
+  }
+
   // token holder 將指定數量的 token 轉給其他地址
   function transfer(
     address recipient,
     uint amount
-  ) public returns (bool) {
+  ) public checkBalance(amount) returns (bool) {
     balanceOf[msg.sender] -= amount;
     balanceOf[recipient]  += amount;
     emit Transfer(msg.sender, recipient, amount);
@@ -47,7 +52,7 @@ contract MyWeth is IWETH9 {
   function approve(
     address spender,
     uint amount
-  ) public returns (bool) {
+  ) public checkBalance(amount) returns (bool) {
     allowance[msg.sender][spender] = amount;
     emit Approval(msg.sender, spender, amount);
 
@@ -93,8 +98,7 @@ contract MyWeth is IWETH9 {
   }
 
   // Withdraw => 將與 _amount 數量的 ethers 從合約中轉給 user，並 burn 掉對應數量的 token
-  function withdraw(uint256 _amount) external override {
-    require(balanceOf[msg.sender] >= _amount, "Insufficient balance");
+  function withdraw(uint256 _amount) external checkBalance(_amount) override {
     burn(_amount);
     (bool result,) = payable(msg.sender).call{value: _amount}("");
     require(result, "Transfer failed");
