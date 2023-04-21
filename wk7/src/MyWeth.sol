@@ -76,14 +76,14 @@ contract MyWeth is IWETH9 {
   function mint(uint amount) public {
     balanceOf[msg.sender] += amount;
     totalSupply += amount;
-    emit Transfer(address(0), msg.sender, amount);
+    emit Transfer(address(this), msg.sender, amount);
   }
 
   // Burn some tokens
   function burn(uint amount) public {
     balanceOf[msg.sender] -= amount;
     totalSupply -= amount;
-    emit Transfer(msg.sender, address(0), amount);
+    emit Transfer(msg.sender, address(this), amount);
   }
 
   // ↓↓↓ 課堂練習的部份 ↓↓↓
