@@ -6,14 +6,19 @@ import { MyWeth } from "../src/MyWeth.sol";
 
 contract MyWethTest is Test {
   MyWeth instance;
-  address user;
+  address user1;
+  address user2;
 
   event Transfer(address indexed from, address indexed to, uint amount);
   event Approval(address indexed owner, address indexed spender, uint amount);
 
   function setUp() public {
-    user = address(0x01);
+    user1 = address(0x01);
+    user2 = address(0x02);
     instance = new MyWeth();
+
+    vm.label(user1, "user1");
+    vm.label(user2, "user2");
   }
 
   // Deposit: 當 user1 呼叫 deposit 並發送 ether 時，應：
