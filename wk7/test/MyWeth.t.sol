@@ -8,6 +8,7 @@ contract MyWethTest is Test {
   MyWeth instance;
   address user1;
   address user2;
+  address user3;
 
   event Transfer(address indexed from, address indexed to, uint amount);
   event Approval(address indexed owner, address indexed spender, uint amount);
@@ -15,10 +16,12 @@ contract MyWethTest is Test {
   function setUp() public {
     user1 = address(0x01);
     user2 = address(0x02);
+    user3 = address(0x03);
     instance = new MyWeth();
 
     vm.label(user1, "user1");
     vm.label(user2, "user2");
+    vm.label(user3, "user3");
   }
 
   // Deposit: 當 user1 呼叫 deposit 並發送 ether 時，應：
@@ -36,27 +39,33 @@ contract MyWethTest is Test {
   // 5: 將與 msg.value 等值的 ether 轉給 user1
   // 6: contract 餘額減少與 _amount 相等的 ether
   function testDepositWithdraw() public {
+    // Prepare
     vm.deal(user1, 1 ether);
+
     vm.startPrank(user1);
-    // Deposit
+    // Deposit Steps
     vm.expectEmit();
     emit Transfer(address(instance), user1, 0.5 * 10**18);
     instance.deposit{value: 0.5 ether}();
+
     assertEq(instance.balanceOf(user1),  0.5 * 10**18);
     assertEq(address(instance).balance, 0.5 ether);
     assertEq(address(user1).balance, 0.5 ether);
     assertEq(instance.totalSupply(), 0.5 * 10**18);
 
-    // Withdraw
+    // Withdraw Steps
     vm.expectRevert("Insufficient balance");
     instance.withdraw(1 * 10**18);
+
     vm.expectEmit();
     emit Transfer(user1, address(instance), 0.3 ether);
     instance.withdraw(0.3 * 10**18);
+
     assertEq(instance.balanceOf(user1), 0.2 * 10**18);
     assertEq(address(instance).balance, 0.2 ether);
     assertEq(address(user1).balance, 0.8 ether);
     assertEq(instance.totalSupply(), 0.2 * 10**18);
+
     vm.stopPrank();
   }
 }
