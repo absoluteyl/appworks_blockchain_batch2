@@ -110,4 +110,82 @@ contract MyWethTest is Test {
 
     vm.stopPrank();
   }
+
+  // Approve: user1 將自己的 ERC20 token 授權給 user2 並指定授權金額時，應：
+  // 1. 授權的金額不能超過 user1 的 ERC20 token 餘額
+  // 2. contract emit Approval event
+  // 3. user1 授權給 user2 的 allowance 增加與 _amount 相等的值
+  // 4. user1 的 ERC20 token 餘額不變
+  // 5. user2 的 ERC20 token 餘額不變
+  // 6. contract 餘額不變
+  // 7. user1 帳戶的 ether 不變
+  // 8. user2 帳戶的 ether 不變
+  // 9. totalSupply 不變
+  // Transfer: user2 將 user1 的 ERC20 token 轉給 user3 時，應：
+  // 1. 金額不能超過 user1 所授權給 user2 的金額
+  // 2. contract emit Transfer event
+  // 3. user1 授權給 user2 的 allowance 減少與 _amount 相等的值
+  // 4. user1 的 ERC20 token 餘額減少與 _amount 相等的值
+  // 5. user2 的 ERC20 token 餘額不變
+  // 6. user3 的 ERC20 token 餘額增加與 _amount 相等的值
+  // 7. contract 餘額不變
+  // 8. user1 帳戶的 ether 不變
+  // 9. user2 帳戶的 ether 不變
+  // 10. user3 帳戶的 ether 不變
+  // 11. totalSupply 不變
+  function testApproveTransferFrom() public {
+    // Prepare
+    vm.deal(user1, 1 ether);
+
+    vm.startPrank(user1);
+
+    vm.expectEmit();
+    emit Transfer(address(instance), user1, 0.9 ether);
+    instance.deposit{value: 0.9 ether}();
+
+    assertEq(instance.balanceOf(user1),  0.9 * 10**18);
+    assertEq(address(instance).balance, 0.9 ether);
+    assertEq(address(user1).balance, 0.1 ether);
+    assertEq(instance.totalSupply(), 0.9 * 10**18);
+
+    // Approve steps
+    vm.expectRevert("Insufficient balance");
+    instance.approve(user2, 1 * 10**18);
+
+    vm.expectEmit();
+    emit Approval(user1, user2, 0.7 * 10**18);
+    instance.approve(user2, 0.7 * 10**18);
+
+    assertEq(instance.allowance(user1, user2), 0.7 * 10**18);
+    assertEq(instance.balanceOf(user1),  0.9 * 10**18);
+    assertEq(instance.balanceOf(user2),  0);
+    assertEq(address(instance).balance,  0.9 ether);
+    assertEq(address(user1).balance,  0.1 ether);
+    assertEq(address(user2).balance,  0 ether);
+    assertEq(instance.totalSupply(), 0.9 * 10**18);
+
+    vm.stopPrank();
+
+    // TransferFrom steps
+    vm.startPrank(user2);
+
+    vm.expectRevert("Insufficient allowance");
+    instance.transferFrom(user1, user3, 0.9 * 10**18);
+
+    vm.expectEmit();
+    emit Transfer(user1, user3, 0.3 * 10**18);
+    instance.transferFrom(user1, user3, 0.3 * 10**18);
+
+    assertEq(instance.allowance(user1, user2), 0.4 * 10**18);
+    assertEq(instance.balanceOf(user1),  0.6 * 10**18);
+    assertEq(instance.balanceOf(user2),  0);
+    assertEq(instance.balanceOf(user3),  0.3 * 10**18);
+    assertEq(address(instance).balance,  0.9 ether);
+    assertEq(address(user1).balance,  0.1 ether);
+    assertEq(address(user2).balance,  0);
+    assertEq(address(user3).balance,  0);
+    assertEq(instance.totalSupply(), 0.9 * 10**18);
+
+    vm.stopPrank();
+  }
 }
