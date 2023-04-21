@@ -24,7 +24,7 @@ contract MyBAYCTest is Test {
 
   function setUp() public {
     // Fork ethereum mainnet
-    forkId = vm.createFork("https://eth-mainnet.g.alchemy.com/v2/RWTA1ioafATxmbndegq3qIKdDDoK48qO", 12299047);
+    forkId = vm.createFork(vm.rpcUrl("mainnet"), 12299047);
     vm.selectFork(forkId);
     assertEq(block.number, 12299047);
     user = address(0x01);
