@@ -68,4 +68,46 @@ contract MyWethTest is Test {
 
     vm.stopPrank();
   }
+
+  // Transfer: 當 user1 欲將 ERC20 Token 轉給 user2 時，應：
+  // 1: 金額不能超過 user1 的 ERC20 token 餘額
+  // 2: contract emit Transfer event
+  // 3: user1 的 ERC20 token 餘額減少與 _amount 相等的值
+  // 4: user2 的 ERC20 token 餘額增加與 _amount 相等的值
+  // 5: contract 餘額不變
+  // 6: user1 帳戶的 ether 不變
+  // 7: user2 帳戶的 ether 不變
+  // 8: totalSupply 不變
+  function testTransfer() public {
+    // Prepare
+    vm.deal(user1, 1 ether);
+
+    vm.startPrank(user1);
+
+    vm.expectEmit();
+    emit Transfer(address(instance), user1, 0.9 ether);
+    instance.deposit{value: 0.9 ether}();
+
+    assertEq(instance.balanceOf(user1),  0.9 * 10**18);
+    assertEq(address(instance).balance, 0.9 ether);
+    assertEq(address(user1).balance, 0.1 ether);
+    assertEq(instance.totalSupply(), 0.9 * 10**18);
+
+    // Transfer steps
+    vm.expectRevert("Insufficient balance");
+    instance.transfer(user2, 1 * 10**18);
+
+    vm.expectEmit();
+    emit Transfer(user1, user2, 0.3 * 10**18);
+    instance.transfer(user2, 0.3 * 10**18);
+
+    assertEq(instance.balanceOf(user1),  0.6 * 10**18);
+    assertEq(instance.balanceOf(user2),  0.3 * 10**18);
+    assertEq(address(instance).balance,  0.9 * 10**18);
+    assertEq(address(user1).balance,  0.1 * 10**18);
+    assertEq(address(user2).balance,  0);
+    assertEq(instance.totalSupply(), 0.9 * 10**18);
+
+    vm.stopPrank();
+  }
 }
