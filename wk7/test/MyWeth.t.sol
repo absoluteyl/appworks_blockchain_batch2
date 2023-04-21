@@ -121,7 +121,7 @@ contract MyWethTest is Test {
   // 7. user1 帳戶的 ether 不變
   // 8. user2 帳戶的 ether 不變
   // 9. totalSupply 不變
-  // Transfer: user2 將 user1 的 ERC20 token 轉給 user3 時，應：
+  // TransferFrom: user2 將 user1 的 ERC20 token 轉給 user3 時，應：
   // 1. 金額不能超過 user1 所授權給 user2 的金額
   // 2. contract emit Transfer event
   // 3. user1 授權給 user2 的 allowance 減少與 _amount 相等的值
