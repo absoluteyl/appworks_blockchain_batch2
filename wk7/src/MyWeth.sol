@@ -91,17 +91,14 @@ contract MyWeth is IWETH9 {
   // ↓↓↓ 課堂練習的部份 ↓↓↓
   // Deposit => 將與 msg.value 量相同的 erc20 token 轉給 user
   function deposit() external payable override {
-    balanceOf[msg.sender] += msg.value;
-    totalSupply += msg.value;
+    mint(msg.value);
     emit Deposit(address(this), msg.sender, msg.value);
   }
 
   // Withdraw => 將與 _amount 數量的 ethers 從合約中轉給 user，並 burn 掉對應數量的 token
   function withdraw(uint256 _amount) external override {
     require(balanceOf[msg.sender] >= _amount, "Insufficient balance");
-    balanceOf[msg.sender] -= _amount;
-    totalSupply -= _amount;
-    // payable(msg.sender).transfer(_amount);
+    burn(_amount);
     (bool result,) = payable(msg.sender).call{value: _amount}("");
     if (result) {
       emit Withdraw(msg.sender, address(this), _amount);
