@@ -24,20 +24,21 @@ contract MyWethTest is Test {
     vm.label(user3, "user3");
   }
 
-  // Deposit: 當 user1 呼叫 deposit 並發送 ether 時，應：
-  // 1：contract emit Transfer event
-  // 2：contract 將與 msg.value 等值的 ERC20 token mint 給 user1
-  // 3：user1 發送的 ether 存入合約
-  // 4：user1 帳戶的 ether 減少與 msg.value 相等的值
-  // 5：totalSupply 增加 msg.value 的 ERC20 token
+  // Deposit: 當 user1 透過 deposit() 發送 0.5 ETH 時，應：
+  // 1. contract 發出 Transfer event，內容為 `from: contract, to: user1, 0.5 WETH`
+  // 2. user1 在 contract 中有 0.5 WETH 的餘額
+  // 3. contract 帳戶餘額為 0.5ETH
+  // 4. user1 帳戶餘額為 0.5ETH
+  // 5. contract totalSupply 為 0.5 WETH
 
-  // Withdraw： 當 user1 呼叫 withdraw 時，應：
-  // 1: 金額不能超過 user1 的 ERC20 token 餘額
-  // 2: contract emit Transfer event
-  // 3: user1 的 ERC20 token 餘額減少與 _amount 相等的值
-  // 4: 要 burn 掉與 _amount 相等的 ERC20 token (totalSupply 減少)
-  // 5: 將與 msg.value 等值的 ether 轉給 user1
-  // 6: contract 餘額減少與 _amount 相等的 ether
+  // Withdraw: 承 Deposit，當 user1 呼叫 withdraw()：
+  // 1. 欲提領 1 WETH（超過 user1 在 contract 中的 WETH 餘額）時，revert 並回覆 `Insufficient balance` 錯誤
+  // 2. 欲提領 0.3 WETH 時：
+  //     1. contract 發出 Transfer event，內容為 `from: user1, to: contract, 0.3 WETH`
+  //     2. user1 在 contract 中餘額變為 0.2 WETH
+  //     3. contract 帳戶餘額為 0.2 ETH
+  //     4. user1 帳戶餘額增加為 0.8 ETH
+  //     5. contract totalSupply 減少為 0.2 WETH
   function testDepositWithdraw() public {
     // Prepare
     vm.deal(user1, 1 ether);
@@ -69,15 +70,16 @@ contract MyWethTest is Test {
     vm.stopPrank();
   }
 
-  // Transfer: 當 user1 欲將 ERC20 Token 轉給 user2 時，應：
-  // 1: 金額不能超過 user1 的 ERC20 token 餘額
-  // 2: contract emit Transfer event
-  // 3: user1 的 ERC20 token 餘額減少與 _amount 相等的值
-  // 4: user2 的 ERC20 token 餘額增加與 _amount 相等的值
-  // 5: contract 餘額不變
-  // 6: user1 帳戶的 ether 不變
-  // 7: user2 帳戶的 ether 不變
-  // 8: totalSupply 不變
+  // Transfer: 當 user1 已有 1ETH 並將其中 0.9 換為 WETH，且欲轉帳給 user2 時：
+  //   1. 欲轉 1 WETH （超過 user1 在 contract 中的 WETH 餘額）給 user2 時，revert 並回覆 `Insufficient balance` 錯誤
+  //   2. 欲轉 0.3 WETH 給 user2 時：
+  //     1. contract 發出 Transfer event，內容為 `from: user1, to: user2, 0.3 WETH`
+  //     2. user1 在 contract 中餘額變為 0.6 WETH
+  //     3. user2 在 contract 中餘額變為 0.3 WETH
+  //     4. contract 帳戶餘額仍為 0.9 ETH
+  //     5. user1 帳戶餘額仍為 0.1 ETH
+  //     6. user1 帳戶餘額仍為 0 ETH
+  //     7. contract totalSupply 仍為 0.9 WETH
   function testTransfer() public {
     // Prepare
     vm.deal(user1, 1 ether);
@@ -88,6 +90,7 @@ contract MyWethTest is Test {
     emit Transfer(address(instance), user1, 0.9 ether);
     instance.deposit{value: 0.9 ether}();
 
+    // Check prepare result
     assertEq(instance.balanceOf(user1), 0.9 * 10**18);
     assertEq(address(instance).balance, 0.9 ether);
     assertEq(address(user1).balance, 0.1 ether);
@@ -103,36 +106,39 @@ contract MyWethTest is Test {
 
     assertEq(instance.balanceOf(user1), 0.6 * 10**18);
     assertEq(instance.balanceOf(user2), 0.3 * 10**18);
-    assertEq(address(instance).balance, 0.9 * 10**18);
-    assertEq(address(user1).balance, 0.1 * 10**18);
+    assertEq(address(instance).balance, 0.9 ether);
+    assertEq(address(user1).balance, 0.1 ether);
     assertEq(address(user2).balance, 0);
     assertEq(instance.totalSupply(), 0.9 * 10**18);
 
     vm.stopPrank();
   }
 
-  // Approve: user1 將自己的 ERC20 token 授權給 user2 並指定授權金額時，應：
-  // 1. 授權的金額不能超過 user1 的 ERC20 token 餘額
-  // 2. contract emit Approval event
-  // 3. user1 授權給 user2 的 allowance 增加與 _amount 相等的值
-  // 4. user1 的 ERC20 token 餘額不變
-  // 5. user2 的 ERC20 token 餘額不變
-  // 6. contract 餘額不變
-  // 7. user1 帳戶的 ether 不變
-  // 8. user2 帳戶的 ether 不變
-  // 9. totalSupply 不變
-  // TransferFrom: user2 將 user1 的 ERC20 token 轉給 user3 時，應：
-  // 1. 金額不能超過 user1 所授權給 user2 的金額
-  // 2. contract emit Transfer event
-  // 3. user1 授權給 user2 的 allowance 減少與 _amount 相等的值
-  // 4. user1 的 ERC20 token 餘額減少與 _amount 相等的值
-  // 5. user2 的 ERC20 token 餘額不變
-  // 6. user3 的 ERC20 token 餘額增加與 _amount 相等的值
-  // 7. contract 餘額不變
-  // 8. user1 帳戶的 ether 不變
-  // 9. user2 帳戶的 ether 不變
-  // 10. user3 帳戶的 ether 不變
-  // 11. totalSupply 不變
+  // Approve: 當 user1 已有 1ETH 並將其中 0.9 換為 WETH，且欲授權 user2 轉帳給 user3 時：
+  //   1. 欲授權 1 WETH （超過 user1 在 contract 中的 WETH 餘額）給 user2 時，revert 並回覆 `Insufficient balance` 錯誤
+  //   2. 欲授權 0.7 WETH 給 user2 時：
+  //     1. contract 發出 Approval event，內容為 `from: user1, to: user2, 0.7 WETH`
+  //     2. user1 授權給 user2 的 allowance 為 0.7 WETH
+  //     3. user1 在 contract 中餘額仍為 0.9 WETH
+  //     4. user2 在 contract 中餘額仍為 0 WETH
+  //     5. contract 帳戶餘額仍為 0.9 ETH
+  //     6. user1 帳戶餘額仍為 0.1 ETH
+  //     7. user2 帳戶餘額仍為 0 ETH
+  //     8. contract totalSupply 仍為 0.9 WETH
+
+  // TransferFrom: 承 Approve，user2 欲將 user1 的 WETH 轉帳給 user3 時：
+  //   1. 欲轉 0.9 WETH （超過 user1 授權給 use2 的 WETH 金額）給 user3 時，revert 並回覆 `Insufficient allowance` 錯誤
+  //   2. 欲轉 0.3 WETH 給 user3 時：
+  //     1. contract emit Transfer event
+  //     2. user1 授權給 user2 的 allowance 減少為 0.4 WETH
+  //     3. user1 在 contract 中餘額減少為 0.6 WETH
+  //     4. user2 在 contract 中餘額仍為 0 WETH
+  //     5. userˇ 在 contract 中餘額增加為 0.3 WETH
+  //     6. contract 帳戶餘額仍為 0.9 ETH
+  //     7. user1 帳戶餘額仍為 0.1 ETH
+  //     8. user2 帳戶餘額仍為 0 ETH
+  //     9. user3 帳戶餘額仍為 0 ETH
+  //     10. contract totalSupply 仍為 0.9 WETH
   function testApproveTransferFrom() public {
     // Prepare
     vm.deal(user1, 1 ether);
@@ -143,6 +149,7 @@ contract MyWethTest is Test {
     emit Transfer(address(instance), user1, 0.9 ether);
     instance.deposit{value: 0.9 ether}();
 
+    // Check prepare result
     assertEq(instance.balanceOf(user1), 0.9 * 10**18);
     assertEq(address(instance).balance, 0.9 ether);
     assertEq(address(user1).balance, 0.1 ether);
