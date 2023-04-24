@@ -26,8 +26,8 @@ contract MyWeth is IWETH9 {
   mapping(address => mapping(address => uint)) public allowance;
 
   // ERC20 token 的參數
-  string public name     = "AbsoluToken";
-  string public symbol   = "ABT";
+  string public name     = "Wrap Ether";
+  string public symbol   = "WETH";
   uint8  public decimals = 18; // token 是多少進制
 
   modifier checkBalance(uint amount) {
