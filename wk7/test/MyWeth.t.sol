@@ -46,7 +46,7 @@ contract MyWethTest is Test {
     vm.startPrank(user1);
     // Deposit Steps
     vm.expectEmit();
-    emit Transfer(address(instance), user1, 0.5 * 10**18);
+    emit Transfer(address(0), user1, 0.5 * 10**18);
     instance.deposit{value: 0.5 ether}();
 
     assertEq(instance.balanceOf(user1), 0.5 * 10**18);
@@ -59,7 +59,7 @@ contract MyWethTest is Test {
     instance.withdraw(1 * 10**18);
 
     vm.expectEmit();
-    emit Transfer(user1, address(instance), 0.3 ether);
+    emit Transfer(user1, address(0), 0.3 ether);
     instance.withdraw(0.3 * 10**18);
 
     assertEq(instance.balanceOf(user1), 0.2 * 10**18);
@@ -87,7 +87,7 @@ contract MyWethTest is Test {
     vm.startPrank(user1);
 
     vm.expectEmit();
-    emit Transfer(address(instance), user1, 0.9 ether);
+    emit Transfer(address(0), user1, 0.9 ether);
     instance.deposit{value: 0.9 ether}();
 
     // Check prepare result
@@ -146,7 +146,7 @@ contract MyWethTest is Test {
     vm.startPrank(user1);
 
     vm.expectEmit();
-    emit Transfer(address(instance), user1, 0.9 ether);
+    emit Transfer(address(0), user1, 0.9 ether);
     instance.deposit{value: 0.9 ether}();
 
     // Check prepare result
