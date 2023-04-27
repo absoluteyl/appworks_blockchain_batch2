@@ -108,8 +108,6 @@ contract MyWeth is IWETH9 {
 
   // Receive => 將與 msg.value 量的 erc20 token 轉給 user
   receive() external payable {
-    balanceOf[msg.sender] += msg.value;
-    totalSupply += msg.value;
-    emit Transfer(address(0), msg.sender, msg.value);
+    _mint(msg.value);
   }
 }
