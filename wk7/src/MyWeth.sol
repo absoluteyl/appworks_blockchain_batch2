@@ -80,14 +80,14 @@ contract MyWeth is IWETH9 {
 
   // NOT ERC20 Standard functions
   // Mint new tokens
-  function mint(uint amount) public {
+  function _mint(uint amount) internal {
     balanceOf[msg.sender] += amount;
     totalSupply += amount;
     emit Transfer(address(0), msg.sender, amount);
   }
 
   // Burn some tokens
-  function burn(uint amount) public {
+  function _burn(uint amount) internal {
     balanceOf[msg.sender] -= amount;
     totalSupply -= amount;
     emit Transfer(msg.sender, address(0), amount);
@@ -96,12 +96,12 @@ contract MyWeth is IWETH9 {
   // ↓↓↓ 課堂練習的部份 ↓↓↓
   // Deposit => 將與 msg.value 量相同的 erc20 token 轉給 user
   function deposit() external payable override {
-    mint(msg.value);
+    _mint(msg.value);
   }
 
   // Withdraw => 將與 _amount 數量的 ethers 從合約中轉給 user，並 burn 掉對應數量的 token
   function withdraw(uint256 _amount) external checkBalance(_amount) override {
-    burn(_amount);
+    _burn(_amount);
     (bool result,) = payable(msg.sender).call{value: _amount}("");
     require(result, "Transfer failed");
   }
