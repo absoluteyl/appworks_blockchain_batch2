@@ -87,7 +87,7 @@ contract MyWeth is IWETH9 {
   }
 
   // Burn some tokens
-  function _burn(uint amount) internal {
+  function _burn(uint amount) internal checkBalance(amount) {
     balanceOf[msg.sender] -= amount;
     totalSupply -= amount;
     emit Transfer(msg.sender, address(0), amount);
