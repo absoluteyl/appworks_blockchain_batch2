@@ -14,14 +14,10 @@ contract MyWethTest is Test {
   event Approval(address indexed owner, address indexed spender, uint amount);
 
   function setUp() public {
-    user1 = address(0x01);
-    user2 = address(0x02);
-    user3 = address(0x03);
+    user1 = makeAddr("user1");
+    user2 = makeAddr("user2");
+    user3 = makeAddr("user3");
     instance = new MyWeth();
-
-    vm.label(user1, "user1");
-    vm.label(user2, "user2");
-    vm.label(user3, "user3");
   }
 
   // Deposit: 當 user1 透過 deposit() 發送 0.5 ETH 時，應：
