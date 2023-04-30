@@ -1,3 +1,9 @@
+[submodule "wk8/Clock"]
+	path = wk8/Clock
+	url = git@github.com-absoluteyl:absoluteyl/Clock.git
 [submodule "wk8/RugPullHW"]
 	path = wk8/RugPullHW
-	url = git@github.com:absoluteyl/RugPullHW.git
+	url = git@github.com-absoluteyl:absoluteyl/RugPullHW.git
+[submodule "wk8/FakeUSDC"]
+	path = wk8/FakeUSDC
+	url = git@github.com-absoluteyl:absoluteyl/FakeUSDC.git
