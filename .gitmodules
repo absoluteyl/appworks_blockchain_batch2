@@ -7,3 +7,6 @@
 [submodule "wk8/FakeUSDC"]
 	path = wk8/FakeUSDC
 	url = git@github.com-absoluteyl:absoluteyl/FakeUSDC.git
+[submodule "wk8/ProxyPart2"]
+	path = wk8/ProxyPart2
+	url = git@github.com-absoluteyl:absoluteyl/ProxyPart2.git
