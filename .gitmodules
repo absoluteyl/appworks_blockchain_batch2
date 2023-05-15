@@ -10,3 +10,6 @@
 [submodule "wk8/ProxyPart2"]
 	path = wk8/ProxyPart2
 	url = git@github.com-absoluteyl:absoluteyl/ProxyPart2.git
+[submodule "wk9/NFT"]
+	path = wk9/NFT
+	url = git@github.com-absoluteyl:absoluteyl/NFT.git
