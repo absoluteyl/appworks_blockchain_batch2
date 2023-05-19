@@ -5,10 +5,10 @@ import "forge-std/Test.sol";
 import { MyWeth } from "../src/MyWeth.sol";
 
 contract MyWethTest is Test {
-  MyWeth instance;
-  address user1;
-  address user2;
-  address user3;
+  MyWeth public instance;
+  address public user1;
+  address public user2;
+  address public user3;
 
   event Transfer(address indexed from, address indexed to, uint amount);
   event Approval(address indexed owner, address indexed spender, uint amount);
