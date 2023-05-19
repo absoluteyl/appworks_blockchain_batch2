@@ -18,6 +18,8 @@ contract MyWethTest is Test {
     user2 = makeAddr("user2");
     user3 = makeAddr("user3");
     instance = new MyWeth();
+
+    deal(user1, 1 ether);
   }
 
   // Deposit: 當 user1 透過 deposit() 發送 0.5 ETH 時，應：
@@ -36,9 +38,6 @@ contract MyWethTest is Test {
   //     4. user1 帳戶餘額增加為 0.8 ETH
   //     5. contract totalSupply 減少為 0.2 WETH
   function testDepositWithdraw() public {
-    // Prepare
-    vm.deal(user1, 1 ether);
-
     vm.startPrank(user1);
     // Deposit Steps
     vm.expectEmit();
@@ -78,8 +77,6 @@ contract MyWethTest is Test {
   //     7. contract totalSupply 仍為 0.9 WETH
   function testTransfer() public {
     // Prepare
-    vm.deal(user1, 1 ether);
-
     vm.startPrank(user1);
 
     vm.expectEmit();
@@ -137,8 +134,6 @@ contract MyWethTest is Test {
   //     10. contract totalSupply 仍為 0.9 WETH
   function testApproveTransferFrom() public {
     // Prepare
-    vm.deal(user1, 1 ether);
-
     vm.startPrank(user1);
 
     vm.expectEmit();
