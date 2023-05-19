@@ -67,6 +67,7 @@ contract MyWeth is IWETH9 {
   ) public returns (bool) {
     // 先確認 allowance 金額
     require(allowance[sender][msg.sender] >= amount, "Insufficient allowance");
+    require(balanceOf[sender] >= amount, "Insufficient balance");
     // 扣除 allowance
     allowance[sender][msg.sender] -= amount;
     // 實際轉帳
