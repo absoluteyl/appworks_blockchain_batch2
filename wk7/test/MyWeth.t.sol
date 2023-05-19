@@ -13,6 +13,20 @@ contract MyWethTest is Test {
   event Transfer(address indexed from, address indexed to, uint amount);
   event Approval(address indexed owner, address indexed spender, uint amount);
 
+  modifier depositWETH(address _user, uint _amount) {
+    uint originBalance = address(_user).balance;
+    vm.expectEmit();
+    emit Transfer(address(0), _user, _amount);
+    instance.deposit{value: _amount}();
+
+    // Check prepare result
+    assertEq(instance.balanceOf(_user), _amount);
+    assertEq(address(instance).balance, _amount);
+    assertEq(address(_user).balance, (originBalance - _amount));
+    assertEq(instance.totalSupply(), _amount);
+    _;
+  }
+
   function setUp() public {
     user1 = makeAddr("user1");
     user2 = makeAddr("user2");
@@ -75,19 +89,9 @@ contract MyWethTest is Test {
   //     5. user1 帳戶餘額仍為 0.1 ETH
   //     6. user1 帳戶餘額仍為 0 ETH
   //     7. contract totalSupply 仍為 0.9 WETH
-  function testTransfer() public {
+  function testTransfer() public depositWETH(user1, 0.9 ether) {
     // Prepare
     vm.startPrank(user1);
-
-    vm.expectEmit();
-    emit Transfer(address(0), user1, 0.9 ether);
-    instance.deposit{value: 0.9 ether}();
-
-    // Check prepare result
-    assertEq(instance.balanceOf(user1), 0.9 * 10**18);
-    assertEq(address(instance).balance, 0.9 ether);
-    assertEq(address(user1).balance, 0.1 ether);
-    assertEq(instance.totalSupply(), 0.9 * 10**18);
 
     // Transfer steps
     vm.expectRevert("Insufficient balance");
@@ -132,19 +136,9 @@ contract MyWethTest is Test {
   //     8. user2 帳戶餘額仍為 0 ETH
   //     9. user3 帳戶餘額仍為 0 ETH
   //     10. contract totalSupply 仍為 0.9 WETH
-  function testApproveTransferFrom() public {
+  function testApproveTransferFrom() public depositWETH(user1, 0.9 ether) {
     // Prepare
     vm.startPrank(user1);
-
-    vm.expectEmit();
-    emit Transfer(address(0), user1, 0.9 ether);
-    instance.deposit{value: 0.9 ether}();
-
-    // Check prepare result
-    assertEq(instance.balanceOf(user1), 0.9 * 10**18);
-    assertEq(address(instance).balance, 0.9 ether);
-    assertEq(address(user1).balance, 0.1 ether);
-    assertEq(instance.totalSupply(), 0.9 * 10**18);
 
     // Approve steps
     vm.expectRevert("Insufficient balance");
