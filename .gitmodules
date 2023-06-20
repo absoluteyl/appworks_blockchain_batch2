@@ -13,6 +13,3 @@
 [submodule "wk9/NFT"]
 	path = wk9/NFT
 	url = git@github.com-absoluteyl:absoluteyl/NFT.git
-[submodule "wk10/Blockchain-Resource"]
-	path = wk10/Blockchain-Resource
-	url = git@github.com-absoluteyl:absoluteyl/Blockchain-Resource.git
