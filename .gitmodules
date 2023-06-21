@@ -16,3 +16,6 @@
 [submodule "wk10-14/Blockchain-Resource"]
 	path = wk10-14/Blockchain-Resource
 	url = git@github.com-absoluteyl:absoluteyl/Blockchain-Resource.git
+[submodule "wk15/damn-vulnerable-defi-foundry"]
+	path = wk15/damn-vulnerable-defi-foundry
+	url = git@github.com-absoluteyl:absoluteyl/damn-vulnerable-defi-foundry.git
